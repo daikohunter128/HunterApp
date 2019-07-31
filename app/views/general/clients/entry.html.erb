@@ -1,0 +1,7 @@
+<div id="generic-form">
+  <div id="entry">
+    <%= form_for @entry_form, as: 'form', url: [ :client, @entry_form.entry ] do |f| %>
+    <%= render "form", f: f %>
+  <% end %>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+@import 'colors';
+@import 'dimensions';
+
+div#wrapper {
+  div#container {
+    h1 {
+      margin: 0;
+      padding: $moderate * 1.5 $moderate;
+      font-size: $large;
+      font-weight: normal;
+      background-color: $very_dark_cyan;
+      color: $light_gray;
+    }
+  }
+
+  /* 点滅 */
+.blinking{
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+  }
+  @-webkit-keyframes blink{
+      0% {opacity:0;}
+      100% {opacity:1;}
+  }
+  @-moz-keyframes blink{
+      0% {opacity:0;}
+      100% {opacity:1;}
+  }
+  @keyframes blink{
+      0% {opacity:0;}
+      100% {opacity:1;}
+  }
+}

@@ -1,0 +1,16 @@
+<% @title = '待ち時間状況編集' %>
+<h1><%= @title %></h1>
+
+<div class="main">
+  <p><strong><%= @client.company_name %></strong>様の待ち時間<strong><%= @client.operation_status %></strong></p>
+</div>
+
+<div id="generic-form">
+  <%= form_for @client, url: :client_user do |f| %>
+    <%= render 'form5', f: f %>
+    <div class="buttons">
+      <%= f.submit '更新' %>
+      <%= link_to 'キャンセル', :client_root %>
+    </div>
+  <% end %>
+</div>

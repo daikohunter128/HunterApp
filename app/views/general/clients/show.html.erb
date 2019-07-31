@@ -1,0 +1,45 @@
+<% @title = '代行依頼ページ' %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <table class="attributes">
+    <p>代行のご依頼は電話にてお願いします。</p>
+    <% p1 = RequestPresenter.new(@client, self) %>
+    <tr><th colspan="2"><%= p1.company_name %>の詳細情報</th></tr>
+    <tr><th>待ち時間</th><td><%= p1.operation_status %></td></tr>
+    <tr><th>代行業社名</th><td><%= p1.company_name %></td></tr>
+    <tr><th>フリガナ</th><td><%= p1.company_name_kana %></td></tr>
+    <tr><th>電話番号</th><td><%= p1.phone1 %>-<%= p1.phone2 %>-<%= p1.phone3 %></td></tr>
+  </table>
+</div>
+
+<div class="table-wrapper">
+  <table class="attributes">
+    <% p3 = EntryPresenter.new(@entry, self) %>
+    <tr><th colspan="2">特典・サービスなど</th></tr>
+    <tr><th>弊社の特長など</th><td><%= p3.body %></td></tr>
+  </table>
+  <p>　</p>
+  <div class="main">
+    <strong><p>下の電話番号をタップしてください。</p></strong>
+  <address>
+    TEL:<a href="tel:<%= @client.phone1+@client.phone2+@client.phone3 %>"><%= @client.phone1 %>-<%= @client.phone2 %>-<%= @client.phone3 %></a>
+  </address>
+  </div>
+</div>
+
+<div class="main">
+  <div class="links">
+    <%= link_to '戻る', :general_clients %>
+  </div>
+</div>
+
+<div class="main">
+  <%= render "general/shared/content" %>
+</div>
+<p></p>
+<div class="main">
+  <div class="links">
+    <%= link_to '広告掲載の詳細', :advertisement_general_request %>
+  </div>
+</div>

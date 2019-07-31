@@ -1,0 +1,37 @@
+ja:
+  activerecord:
+    attributes:
+      client:
+        company_name: 代行業社名 
+        company_name_kana: フリガナ（代行業社名）
+        representative: 代表者氏名
+        representative_kana: フリガナ（代表者氏名）
+        certification: 認定番号
+        postal_code1: 郵便番号1
+        postal_code2: 郵便番号2
+        prefectue: 都道府県
+        city: 市区町村
+        address1: 住所
+        address2: ビル・アパート
+        phone1: TEL1
+        phone2: TEL2
+        phone3: TEL3
+        email: メールアドレス
+        prefecture_cord: 都道府県コード
+        agreement: 契約状況
+        start_date: 開始日
+        end_date: 終了日
+    errors:
+      models:
+        client:
+          attributes:
+            email:
+              taken: が他の職員と重複しています。
+            start_date:
+              after_or_equal_to: には2000年1月1日以降の日付を指定してください。
+              before: には1年後の日付より前の日付を指定してください。
+            end_date:
+              after_or_equal_to: には2000年1月衣日以降の日付を指定してください。
+              before: には1年後の日付より前の日付を指定してください。
+              after: には開始日より後の日付を指定してください。
+       

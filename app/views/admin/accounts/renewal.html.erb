@@ -1,0 +1,2971 @@
+<% @title = '都道府県別の継続利用業社数' %>
+<h1><%= @title %>　　　<strong >収益計算用ページ</strong></h1>
+
+<div class="table-wrapper">
+  <table class="listing">
+    <tr>
+      <th>都道府県</th>
+      <th>１月</th>
+      <th>２月</th>
+      <th>３月</th>
+      <th>４月</th>
+      <th>５月</th>
+      <th>６月</th>
+      <th>７月</th>
+      <th>８月</th>
+      <th>９月</th>
+      <th>１０月</th>
+      <th>１１月</th>
+      <th>１２月</th>
+    </tr>
+    <% @prefecture.each do |k| %>
+      <tr>
+        <th><%= k %></th>
+        <% if k == "北海道" %>
+          <% if @hokkaido1 > 0 %>
+            <th><strong><%= @hokkaido1 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido1 %></th>
+          <% end %>
+          <% if @hokkaido2 > 0 %>
+            <th><strong><%= @hokkaido2 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido2 %></th>
+          <% end %>
+          <% if @hokkaido3 > 0 %>
+            <th><strong><%= @hokkaido3 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido3 %></th>
+          <% end %>
+          <% if @hokkaido4 > 0 %>
+            <th><strong><%= @hokkaido4 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido4 %></th>
+          <% end %>
+          <% if @hokkaido5 > 0 %>
+            <th><strong><%= @hokkaido5 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido5 %></th>
+          <% end %>
+          <% if @hokkaido6 > 0 %>
+            <th><strong><%= @hokkaido6 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido6 %></th>
+          <% end %>
+          <% if @hokkaido7 > 0 %>
+            <th><strong><%= @hokkaido7 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido7 %></th>
+          <% end %>
+          <% if @hokkaido8 > 0 %>
+            <th><strong><%= @hokkaido8 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido8 %></th>
+          <% end %>
+          <% if @hokkaido9 > 0 %>
+            <th><strong><%= @hokkaido9 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido9 %></th>
+          <% end %>
+          <% if @hokkaido10 > 0 %>
+            <th><strong><%= @hokkaido10 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido10 %></th>
+          <% end %>
+          <% if @hokkaido11 > 0 %>
+            <th><strong><%= @hokkaido11 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido11 %></th>
+          <% end %>
+          <% if @hokkaido12 > 0 %>
+            <th><strong><%= @hokkaido12 %></strong></th>
+          <% else %>
+            <th><%= @hokkaido12 %></th>
+          <% end %>       
+        <% end %>
+        <% if k == "青森県" %>
+          <% if @aomori1 > 0 %>
+            <th><strong><%= @aomori1 %></strong></th>
+          <% else %>
+            <th><%= @aomori1 %></th>
+          <% end %>
+          <% if @aomori2 > 0 %>
+            <th><strong><%= @aomori2 %></strong></th>
+          <% else %>
+            <th><%= @aomori2 %></th>
+          <% end %>
+          <% if @aomori3 > 0 %>
+            <th><strong><%= @aomori3 %></strong></th>
+          <% else %>
+            <th><%= @aomori3 %></th>
+          <% end %>
+          <% if @aomori4 > 0 %>
+            <th><strong><%= @aomori4 %></strong></th>
+          <% else %>
+            <th><%= @aomori4 %></th>
+          <% end %>
+          <% if @aomori5 > 0 %>
+            <th><strong><%= @aomori5 %></strong></th>
+          <% else %>
+            <th><%= @aomori5 %></th>
+          <% end %>
+          <% if @aomori6 > 0 %>
+            <th><strong><%= @aomori6 %></strong></th>
+          <% else %>
+            <th><%= @aomori6 %></th>
+          <% end %>
+          <% if @aomori7 > 0 %>
+            <th><strong><%= @aomori7 %></strong></th>
+          <% else %>
+            <th><%= @aomori7 %></th>
+          <% end %>
+          <% if @aomori8 > 0 %>
+            <th><strong><%= @aomori8 %></strong></th>
+          <% else %>
+            <th><%= @aomori8 %></th>
+          <% end %>
+          <% if @aomori9 > 0 %>
+            <th><strong><%= @aomori9 %></strong></th>
+          <% else %>
+            <th><%= @aomori9 %></th>
+          <% end %>
+          <% if @aomori10 > 0 %>
+            <th><strong><%= @aomori10 %></strong></th>
+          <% else %>
+            <th><%= @aomori10 %></th>
+          <% end %>
+          <% if @aomori11 > 0 %>
+            <th><strong><%= @aomori11 %></strong></th>
+          <% else %>
+            <th><%= @aomori11 %></th>
+          <% end %>
+          <% if @aomori12 > 0 %>
+            <th><strong><%= @aomori12 %></strong></th>
+          <% else %>
+            <th><%= @aomori12 %></th>
+          <% end %>
+        <% end %>
+        <% if k == "岩手県" %>
+          <% if @iwate1 > 0 %>
+            <th><strong><%= @iwate1 %></strong></th>
+          <% else %>
+            <th><%= @iwate1 %></th>
+          <% end %>
+          <% if @iwate2 > 0 %>
+            <th><strong><%= @iwate2 %></strong></th>
+          <% else %>
+            <th><%= @iwate2 %></th>
+          <% end %>
+          <% if @iwate3 > 0 %>
+            <th><strong><%= @iwate3 %></strong></th>
+          <% else %>
+            <th><%= @iwate3 %></th>
+          <% end %>
+          <% if @iwate4 > 0 %>
+            <th><strong><%= @iwate4 %></strong></th>
+          <% else %>
+            <th><%= @iwate4 %></th>
+          <% end %>
+          <% if @iwate5 > 0 %>
+            <th><strong><%= @iwate5 %></strong></th>
+          <% else %>
+            <th><%= @iwate5 %></th>
+          <% end %>
+          <% if @iwate6 > 0 %>
+            <th><strong><%= @iwate6 %></strong></th>
+          <% else %>
+            <th><%= @iwate6 %></th>
+          <% end %>
+          <% if @iwate7 > 0 %>
+            <th><strong><%= @iwate7 %></strong></th>
+          <% else %>
+            <th><%= @iwate7 %></th>
+          <% end %>
+          <% if @iwate8 > 0 %>
+            <th><strong><%= @iwate8 %></strong></th>
+          <% else %>
+            <th><%= @iwate8 %></th>
+          <% end %>
+          <% if @iwate9 > 0 %>
+            <th><strong><%= @iwate9 %></strong></th>
+          <% else %>
+            <th><%= @iwate9 %></th>
+          <% end %>
+          <% if @iwate10 > 0 %>
+            <th><strong><%= @iwate10 %></strong></th>
+          <% else %>
+            <th><%= @iwate10 %></th>
+          <% end %>
+          <% if @iwate11 > 0 %>
+            <th><strong><%= @iwate11 %></strong></th>
+          <% else %>
+            <th><%= @iwate11 %></th>
+          <% end %>
+          <% if @iwate12 > 0 %>
+            <th><strong><%= @iwate12 %></strong></th>
+          <% else %>
+            <th><%= @iwate12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "宮城県" %>
+          <% if @miyagi1 > 0 %>
+            <th><strong><%= @miyagi1 %></strong></th>
+          <% else %>
+            <th><%= @miyagi1 %></th>
+          <% end %>
+          <% if @miyagi2 > 0 %>
+            <th><strong><%= @miyagi2 %></strong></th>
+          <% else %>
+            <th><%= @miyagi2 %></th>
+          <% end %>
+          <% if @miyagi3 > 0 %>
+            <th><strong><%= @miyagi3 %></strong></th>
+          <% else %>
+            <th><%= @miyagi3 %></th>
+          <% end %>
+          <% if @miyagi4 > 0 %>
+            <th><strong><%= @miyagi4 %></strong></th>
+          <% else %>
+            <th><%= @miyagi4 %></th>
+          <% end %>
+          <% if @miyagi5 > 0 %>
+            <th><strong><%= @miyagi5 %></strong></th>
+          <% else %>
+            <th><%= @miyagi5 %></th>
+          <% end %>
+          <% if @miyagi6 > 0 %>
+            <th><strong><%= @miyagi6 %></strong></th>
+          <% else %>
+            <th><%= @miyagi6 %></th>
+          <% end %>
+          <% if @miyagi7 > 0 %>
+            <th><strong><%= @miyagi7 %></strong></th>
+          <% else %>
+            <th><%= @miyagi7 %></th>
+          <% end %>
+          <% if @miyagi8 > 0 %>
+            <th><strong><%= @miyagi8 %></strong></th>
+          <% else %>
+            <th><%= @miyagi8 %></th>
+          <% end %>
+          <% if @miyagi9 > 0 %>
+            <th><strong><%= @miyagi9 %></strong></th>
+          <% else %>
+            <th><%= @miyagi9 %></th>
+          <% end %>
+          <% if @miyagi10 > 0 %>
+            <th><strong><%= @miyagi10 %></strong></th>
+          <% else %>
+            <th><%= @miyagi10 %></th>
+          <% end %>
+          <% if @miyagi11 > 0 %>
+            <th><strong><%= @miyagi11 %></strong></th>
+          <% else %>
+            <th><%= @miyagi11 %></th>
+          <% end %>
+          <% if @miyagi12 > 0 %>
+            <th><strong><%= @miyagi12 %></strong></th>
+          <% else %>
+            <th><%= @miyagi12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "秋田県" %>
+          <% if @akita1 > 0 %>
+            <th><strong><%= @akita1 %></strong></th>
+          <% else %>
+            <th><%= @akita1 %></th>
+          <% end %>
+          <% if @akita2 > 0 %>
+            <th><strong><%= @akita2 %></strong></th>
+          <% else %>
+            <th><%= @akita2 %></th>
+          <% end %>
+          <% if @akita3 > 0 %>
+            <th><strong><%= @akita3 %></strong></th>
+          <% else %>
+            <th><%= @akita3 %></th>
+          <% end %>
+          <% if @akita4 > 0 %>
+            <th><strong><%= @akita4 %></strong></th>
+          <% else %>
+            <th><%= @akita4 %></th>
+          <% end %>
+          <% if @akita5 > 0 %>
+            <th><strong><%= @akita5 %></strong></th>
+          <% else %>
+            <th><%= @akita5 %></th>
+          <% end %>
+          <% if @akita6 > 0 %>
+            <th><strong><%= @akita6 %></strong></th>
+          <% else %>
+            <th><%= @akita6 %></th>
+          <% end %>
+          <% if @akita7 > 0 %>
+            <th><strong><%= @akita7 %></strong></th>
+          <% else %>
+            <th><%= @akita7 %></th>
+          <% end %>
+          <% if @akita8 > 0 %>
+            <th><strong><%= @akita8 %></strong></th>
+          <% else %>
+            <th><%= @akita8 %></th>
+          <% end %>
+          <% if @akita9 > 0 %>
+            <th><strong><%= @akita9 %></strong></th>
+          <% else %>
+            <th><%= @akita9 %></th>
+          <% end %>
+          <% if @akita10 > 0 %>
+            <th><strong><%= @akita10 %></strong></th>
+          <% else %>
+            <th><%= @akita10 %></th>
+          <% end %>
+          <% if @akita11 > 0 %>
+            <th><strong><%= @akita11 %></strong></th>
+          <% else %>
+            <th><%= @akita11 %></th>
+          <% end %>
+          <% if @akita12 > 0 %>
+            <th><strong><%= @akita12 %></strong></th>
+          <% else %>
+            <th><%= @akita12 %></th>
+          <% end %>
+        <% end %>
+        <% if k == "山形県" %>
+          <% if @yamagata1 > 0 %>
+            <th><strong><%= @yamagata1 %></strong></th>
+          <% else %>
+            <th><%= @yamagata1 %></th>
+          <% end %>
+          <% if @yamagata2 > 0 %>
+            <th><strong><%= @yamagata2 %></strong></th>
+          <% else %>
+            <th><%= @yamagata2 %></th>
+          <% end %>
+          <% if @yamagata3 > 0 %>
+            <th><strong><%= @yamagata3 %></strong></th>
+          <% else %>
+            <th><%= @yamagata3 %></th>
+          <% end %>
+          <% if @yamagata4 > 0 %>
+            <th><strong><%= @yamagata4 %></strong></th>
+          <% else %>
+            <th><%= @yamagata4 %></th>
+          <% end %>
+          <% if @yamagata5 > 0 %>
+            <th><strong><%= @yamagata5 %></strong></th>
+          <% else %>
+            <th><%= @yamagata5 %></th>
+          <% end %>
+          <% if @yamagata6 > 0 %>
+            <th><strong><%= @yamagata6 %></strong></th>
+          <% else %>
+            <th><%= @yamagata6 %></th>
+          <% end %>
+          <% if @yamagata7 > 0 %>
+            <th><strong><%= @yamagata7 %></strong></th>
+          <% else %>
+            <th><%= @yamagata7 %></th>
+          <% end %>
+          <% if @yamagata8 > 0 %>
+            <th><strong><%= @yamagata8 %></strong></th>
+          <% else %>
+            <th><%= @yamagata8 %></th>
+          <% end %>
+          <% if @yamagata9 > 0 %>
+            <th><strong><%= @yamagata9 %></strong></th>
+          <% else %>
+            <th><%= @yamagata9 %></th>
+          <% end %>
+          <% if @yamagata10 > 0 %>
+            <th><strong><%= @yamagata10 %></strong></th>
+          <% else %>
+            <th><%= @yamagata10 %></th>
+          <% end %>
+          <% if @yamagata11 > 0 %>
+            <th><strong><%= @yamagata11 %></strong></th>
+          <% else %>
+            <th><%= @yamagata11 %></th>
+          <% end %>
+          <% if @yamagata12 > 0 %>
+            <th><strong><%= @yamagata12 %></strong></th>
+          <% else %>
+            <th><%= @yamagata12 %></th>
+          <% end %>
+        <% end %>
+        <% if k == "福島県" %>
+          <% if @fukushima1 > 0 %>
+            <th><strong><%= @fukushima1 %></strong></th>
+          <% else %>
+            <th><%= @fukushima1 %></th>
+          <% end %>
+          <% if @fukushima2 > 0 %>
+            <th><strong><%= @fukushima2 %></strong></th>
+          <% else %>
+            <th><%= @fukushima2 %></th>
+          <% end %>
+          <% if @fukushima3 > 0 %>
+            <th><strong><%= @fukushima3 %></strong></th>
+          <% else %>
+            <th><%= @fukushima3 %></th>
+          <% end %>
+          <% if @fukushima4 > 0 %>
+            <th><strong><%= @fukushima4 %></strong></th>
+          <% else %>
+            <th><%= @fukushima4 %></th>
+          <% end %>
+          <% if @fukushima5 > 0 %>
+            <th><strong><%= @fukushima5 %></strong></th>
+          <% else %>
+            <th><%= @fukushima5 %></th>
+          <% end %>
+          <% if @fukushima6 > 0 %>
+            <th><strong><%= @fukushima6 %></strong></th>
+          <% else %>
+            <th><%= @fukushima6 %></th>
+          <% end %>
+          <% if @fukushima7 > 0 %>
+            <th><strong><%= @fukushima7 %></strong></th>
+          <% else %>
+            <th><%= @fukushima7 %></th>
+          <% end %>
+          <% if @fukushima8 > 0 %>
+            <th><strong><%= @fukushima8 %></strong></th>
+          <% else %>
+            <th><%= @fukushima8 %></th>
+          <% end %>
+          <% if @fukushima9 > 0 %>
+            <th><strong><%= @fukushima9 %></strong></th>
+          <% else %>
+            <th><%= @fukushima9 %></th>
+          <% end %>
+          <% if @fukushima10 > 0 %>
+            <th><strong><%= @fukushima10 %></strong></th>
+          <% else %>
+            <th><%= @fukushima10 %></th>
+          <% end %>
+          <% if @fukushima11 > 0 %>
+            <th><strong><%= @fukushima11 %></strong></th>
+          <% else %>
+            <th><%= @fukushima11 %></th>
+          <% end %>
+          <% if @fukushima12 > 0 %>
+            <th><strong><%= @fukushima12 %></strong></th>
+          <% else %>
+            <th><%= @fukushima12 %></th>
+          <% end %>
+        <% end %>
+        <% if k == "茨城県" %>
+          <% if @ibaraki1 > 0 %>
+            <th><strong><%= @ibaraki1 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki1 %></th>
+          <% end %>
+          <% if @ibaraki2 > 0 %>
+            <th><strong><%= @ibaraki2 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki2 %></th>
+          <% end %>
+          <% if @ibaraki3 > 0 %>
+            <th><strong><%= @ibaraki3 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki3 %></th>
+          <% end %>
+          <% if @ibaraki4 > 0 %>
+            <th><strong><%= @ibaraki4 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki4 %></th>
+          <% end %>
+          <% if @ibaraki5 > 0 %>
+            <th><strong><%= @ibaraki5 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki5 %></th>
+          <% end %>
+          <% if @ibaraki6 > 0 %>
+            <th><strong><%= @ibaraki6 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki6 %></th>
+          <% end %>
+          <% if @ibaraki7 > 0 %>
+            <th><strong><%= @ibaraki7 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki7 %></th>
+          <% end %>
+          <% if @ibaraki8 > 0 %>
+            <th><strong><%= @ibaraki8 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki8 %></th>
+          <% end %>
+          <% if @ibaraki9 > 0 %>
+            <th><strong><%= @ibaraki9 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki9 %></th>
+          <% end %>
+          <% if @ibaraki10 > 0 %>
+            <th><strong><%= @ibaraki10 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki10 %></th>
+          <% end %>
+          <% if @ibaraki11 > 0 %>
+            <th><strong><%= @ibaraki11 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki11 %></th>
+          <% end %>
+          <% if @ibaraki12 > 0 %>
+            <th><strong><%= @ibaraki12 %></strong></th>
+          <% else %>
+            <th><%= @ibaraki12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "栃木県" %>
+          <% if @totigi1 > 0 %>
+            <th><strong><%= @totigi1 %></strong></th>
+          <% else %>
+            <th><%= @totigi1 %></th>
+          <% end %>
+          <% if @totigi2 > 0 %>
+            <th><strong><%= @totigi2 %></strong></th>
+          <% else %>
+            <th><%= @totigi2 %></th>
+          <% end %>
+          <% if @totigi3 > 0 %>
+            <th><strong><%= @totigi3 %></strong></th>
+          <% else %>
+            <th><%= @totigi3 %></th>
+          <% end %>
+          <% if @totigi4 > 0 %>
+            <th><strong><%= @totigi4 %></strong></th>
+          <% else %>
+            <th><%= @totigi4 %></th>
+          <% end %>
+          <% if @totigi5 > 0 %>
+            <th><strong><%= @totigi5 %></strong></th>
+          <% else %>
+            <th><%= @totigi5 %></th>
+          <% end %>
+          <% if @totigi6 > 0 %>
+            <th><strong><%= @totigi6 %></strong></th>
+          <% else %>
+            <th><%= @totigi6 %></th>
+          <% end %>
+          <% if @totigi7 > 0 %>
+            <th><strong><%= @totigi7 %></strong></th>
+          <% else %>
+            <th><%= @totigi7 %></th>
+          <% end %>
+          <% if @totigi8 > 0 %>
+            <th><strong><%= @totigi8 %></strong></th>
+          <% else %>
+            <th><%= @totigi8 %></th>
+          <% end %>
+          <% if @totigi9 > 0 %>
+            <th><strong><%= @totigi9 %></strong></th>
+          <% else %>
+            <th><%= @totigi9 %></th>
+          <% end %>
+          <% if @totigi10 > 0 %>
+            <th><strong><%= @totigi10 %></strong></th>
+          <% else %>
+            <th><%= @totigi10 %></th>
+          <% end %>
+          <% if @totigi11 > 0 %>
+            <th><strong><%= @totigi11 %></strong></th>
+          <% else %>
+            <th><%= @totigi11 %></th>
+          <% end %>
+          <% if @totigi12 > 0 %>
+            <th><strong><%= @totigi12 %></strong></th>
+          <% else %>
+            <th><%= @totigi12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "群馬県" %>
+          <% if @gunnma1 > 0 %>
+            <th><strong><%= @gunnma1 %></strong></th>
+          <% else %>
+            <th><%= @gunnma1 %></th>
+          <% end %>
+          <% if @gunnma2 > 0 %>
+            <th><strong><%= @gunnma2 %></strong></th>
+          <% else %>
+            <th><%= @gunnma2 %></th>
+          <% end %>
+          <% if @gunnma3 > 0 %>
+            <th><strong><%= @gunnma3 %></strong></th>
+          <% else %>
+            <th><%= @gunnma3 %></th>
+          <% end %>
+          <% if @gunnma4 > 0 %>
+            <th><strong><%= @gunnma4 %></strong></th>
+          <% else %>
+            <th><%= @gunnma4 %></th>
+          <% end %>
+          <% if @gunnma5 > 0 %>
+            <th><strong><%= @gunnma5 %></strong></th>
+          <% else %>
+            <th><%= @gunnma5 %></th>
+          <% end %>
+          <% if @gunnma6 > 0 %>
+            <th><strong><%= @gunnma6 %></strong></th>
+          <% else %>
+            <th><%= @gunnma6 %></th>
+          <% end %>
+          <% if @gunnma7 > 0 %>
+            <th><strong><%= @gunnma7 %></strong></th>
+          <% else %>
+            <th><%= @gunnma7 %></th>
+          <% end %>
+          <% if @gunnma8 > 0 %>
+            <th><strong><%= @gunnma8 %></strong></th>
+          <% else %>
+            <th><%= @gunnma8 %></th>
+          <% end %>
+          <% if @gunnma9 > 0 %>
+            <th><strong><%= @gunnma9 %></strong></th>
+          <% else %>
+            <th><%= @gunnma9 %></th>
+          <% end %>
+          <% if @gunnma10 > 0 %>
+            <th><strong><%= @gunnma10 %></strong></th>
+          <% else %>
+            <th><%= @gunnma10 %></th>
+          <% end %>
+          <% if @gunnma11 > 0 %>
+            <th><strong><%= @gunnma11 %></strong></th>
+          <% else %>
+            <th><%= @gunnma11 %></th>
+          <% end %>
+          <% if @gunnma12 > 0 %>
+            <th><strong><%= @gunnma12 %></strong></th>
+          <% else %>
+            <th><%= @gunnma12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "埼玉県" %>
+          <% if @saitama1 > 0 %>
+            <th><strong><%= @saitama1 %></strong></th>
+          <% else %>
+            <th><%= @saitama1 %></th>
+          <% end %>
+          <% if @saitama2 > 0 %>
+            <th><strong><%= @saitama2 %></strong></th>
+          <% else %>
+            <th><%= @saitama2 %></th>
+          <% end %>
+          <% if @saitama3 > 0 %>
+            <th><strong><%= @saitama3 %></strong></th>
+          <% else %>
+            <th><%= @saitama3 %></th>
+          <% end %>
+          <% if @saitama4 > 0 %>
+            <th><strong><%= @saitama4 %></strong></th>
+          <% else %>
+            <th><%= @saitama4 %></th>
+          <% end %>
+          <% if @saitama5 > 0 %>
+            <th><strong><%= @saitama5 %></strong></th>
+          <% else %>
+            <th><%= @saitama5 %></th>
+          <% end %>
+          <% if @saitama6 > 0 %>
+            <th><strong><%= @saitama6 %></strong></th>
+          <% else %>
+            <th><%= @saitama6 %></th>
+          <% end %>
+          <% if @saitama7 > 0 %>
+            <th><strong><%= @saitama7 %></strong></th>
+          <% else %>
+            <th><%= @saitama7 %></th>
+          <% end %>
+          <% if @saitama8 > 0 %>
+            <th><strong><%= @saitama8 %></strong></th>
+          <% else %>
+            <th><%= @saitama8 %></th>
+          <% end %>
+          <% if @saitama9 > 0 %>
+            <th><strong><%= @saitama9 %></strong></th>
+          <% else %>
+            <th><%= @saitama9 %></th>
+          <% end %>
+          <% if @saitama10 > 0 %>
+            <th><strong><%= @saitama10 %></strong></th>
+          <% else %>
+            <th><%= @saitama10 %></th>
+          <% end %>
+          <% if @saitama11 > 0 %>
+            <th><strong><%= @saitama11 %></strong></th>
+          <% else %>
+            <th><%= @saitama11 %></th>
+          <% end %>
+          <% if @saitama12 > 0 %>
+            <th><strong><%= @saitama12 %></strong></th>
+          <% else %>
+            <th><%= @saitama12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "千葉県" %>
+          <% if @chiba1 > 0 %>
+            <th><strong><%= @chiba1 %></strong></th>
+          <% else %>
+            <th><%= @chiba1 %></th>
+          <% end %>
+          <% if @chiba2 > 0 %>
+            <th><strong><%= @chiba2 %></strong></th>
+          <% else %>
+            <th><%= @chiba2 %></th>
+          <% end %>
+          <% if @chiba3 > 0 %>
+            <th><strong><%= @chiba3 %></strong></th>
+          <% else %>
+            <th><%= @chiba3 %></th>
+          <% end %>
+          <% if @chiba4 > 0 %>
+            <th><strong><%= @chiba4 %></strong></th>
+          <% else %>
+            <th><%= @chiba4 %></th>
+          <% end %>
+          <% if @chiba5 > 0 %>
+            <th><strong><%= @chiba5 %></strong></th>
+          <% else %>
+            <th><%= @chiba5 %></th>
+          <% end %>
+          <% if @chiba6 > 0 %>
+            <th><strong><%= @chiba6 %></strong></th>
+          <% else %>
+            <th><%= @chiba6 %></th>
+          <% end %>
+          <% if @chiba7 > 0 %>
+            <th><strong><%= @chiba7 %></strong></th>
+          <% else %>
+            <th><%= @chiba7 %></th>
+          <% end %>
+          <% if @chiba8 > 0 %>
+            <th><strong><%= @chiba8 %></strong></th>
+          <% else %>
+            <th><%= @chiba8 %></th>
+          <% end %>
+          <% if @chiba9 > 0 %>
+            <th><strong><%= @chiba9 %></strong></th>
+          <% else %>
+            <th><%= @chiba9 %></th>
+          <% end %>
+          <% if @chiba10 > 0 %>
+            <th><strong><%= @chiba10 %></strong></th>
+          <% else %>
+            <th><%= @chiba10 %></th>
+          <% end %>
+          <% if @chiba11 > 0 %>
+            <th><strong><%= @chiba11 %></strong></th>
+          <% else %>
+            <th><%= @chiba11 %></th>
+          <% end %>
+          <% if @chiba12 > 0 %>
+            <th><strong><%= @chiba12 %></strong></th>
+          <% else %>
+            <th><%= @chiba12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "東京都" %>
+          <% if @tokyo1 > 0 %>
+            <th><strong><%= @tokyo1 %></strong></th>
+          <% else %>
+            <th><%= @tokyo1 %></th>
+          <% end %>
+          <% if @tokyo2 > 0 %>
+            <th><strong><%= @tokyo2 %></strong></th>
+          <% else %>
+            <th><%= @tokyo2 %></th>
+          <% end %>
+          <% if @tokyo3 > 0 %>
+            <th><strong><%= @tokyo3 %></strong></th>
+          <% else %>
+            <th><%= @tokyo3 %></th>
+          <% end %>
+          <% if @tokyo4 > 0 %>
+            <th><strong><%= @tokyo4 %></strong></th>
+          <% else %>
+            <th><%= @tokyo4 %></th>
+          <% end %>
+          <% if @tokyo5 > 0 %>
+            <th><strong><%= @tokyo5 %></strong></th>
+          <% else %>
+            <th><%= @tokyo5 %></th>
+          <% end %>
+          <% if @tokyo6 > 0 %>
+            <th><strong><%= @tokyo6 %></strong></th>
+          <% else %>
+            <th><%= @tokyo6 %></th>
+          <% end %>
+          <% if @tokyo7 > 0 %>
+            <th><strong><%= @tokyo7 %></strong></th>
+          <% else %>
+            <th><%= @tokyo7 %></th>
+          <% end %>
+          <% if @tokyo8 > 0 %>
+            <th><strong><%= @tokyo8 %></strong></th>
+          <% else %>
+            <th><%= @tokyo8 %></th>
+          <% end %>
+          <% if @tokyo9 > 0 %>
+            <th><strong><%= @tokyo9 %></strong></th>
+          <% else %>
+            <th><%= @tokyo9 %></th>
+          <% end %>
+          <% if @tokyo10 > 0 %>
+            <th><strong><%= @tokyo10 %></strong></th>
+          <% else %>
+            <th><%= @tokyo10 %></th>
+          <% end %>
+          <% if @tokyo11 > 0 %>
+            <th><strong><%= @tokyo11 %></strong></th>
+          <% else %>
+            <th><%= @tokyo11 %></th>
+          <% end %>
+          <% if @tokyo12 > 0 %>
+            <th><strong><%= @tokyo12 %></strong></th>
+          <% else %>
+            <th><%= @tokyo12 %></th>
+          <% end %>
+        <% end %>
+        <% if k == "神奈川県" %>
+          <% if @kanagawa1 > 0 %>
+            <th><strong><%= @kanagawa1 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa1 %></th>
+          <% end %>
+          <% if @kanagawa2 > 0 %>
+            <th><strong><%= @kanagawa2 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa2 %></th>
+          <% end %>
+          <% if @kanagawa3 > 0 %>
+            <th><strong><%= @kanagawa3 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa3 %></th>
+          <% end %>
+          <% if @kanagawa4 > 0 %>
+            <th><strong><%= @kanagawa4 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa4 %></th>
+          <% end %>
+          <% if @kanagawa5 > 0 %>
+            <th><strong><%= @kanagawa5 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa5 %></th>
+          <% end %>
+          <% if @kanagawa6 > 0 %>
+            <th><strong><%= @kanagawa6 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa6 %></th>
+          <% end %>
+          <% if @kanagawa7 > 0 %>
+            <th><strong><%= @kanagawa7 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa7 %></th>
+          <% end %>
+          <% if @kanagawa8 > 0 %>
+            <th><strong><%= @kanagawa8 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa8 %></th>
+          <% end %>
+          <% if @kanagawa9 > 0 %>
+            <th><strong><%= @kanagawa9 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa9 %></th>
+          <% end %>
+          <% if @kanagawa10 > 0 %>
+            <th><strong><%= @kanagawa10 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa10 %></th>
+          <% end %>
+          <% if @kanagawa11 > 0 %>
+            <th><strong><%= @kanagawa11 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa11 %></th>
+          <% end %>
+          <% if @kanagawa12 > 0 %>
+            <th><strong><%= @kanagawa12 %></strong></th>
+          <% else %>
+            <th><%= @kanagawa12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "新潟県" %>
+          <% if @niigata1 > 0 %>
+            <th><strong><%= @niigata1 %></strong></th>
+          <% else %>
+            <th><%= @niigata1 %></th>
+          <% end %>
+          <% if @niigata2 > 0 %>
+            <th><strong><%= @niigata2 %></strong></th>
+          <% else %>
+            <th><%= @niigata2 %></th>
+          <% end %>
+          <% if @niigata3 > 0 %>
+            <th><strong><%= @niigata3 %></strong></th>
+          <% else %>
+            <th><%= @niigata3 %></th>
+          <% end %>
+          <% if @niigata4 > 0 %>
+            <th><strong><%= @niigata4 %></strong></th>
+          <% else %>
+            <th><%= @niigata4 %></th>
+          <% end %>
+          <% if @niigata5 > 0 %>
+            <th><strong><%= @niigata5 %></strong></th>
+          <% else %>
+            <th><%= @niigata5 %></th>
+          <% end %>
+          <% if @niigata6 > 0 %>
+            <th><strong><%= @niigata6 %></strong></th>
+          <% else %>
+            <th><%= @niigata6 %></th>
+          <% end %>
+          <% if @niigata7 > 0 %>
+            <th><strong><%= @niigata7 %></strong></th>
+          <% else %>
+            <th><%= @niigata7 %></th>
+          <% end %>
+          <% if @niigata8 > 0 %>
+            <th><strong><%= @niigata8 %></strong></th>
+          <% else %>
+            <th><%= @niigata8 %></th>
+          <% end %>
+          <% if @niigata9 > 0 %>
+            <th><strong><%= @niigata9 %></strong></th>
+          <% else %>
+            <th><%= @niigata9 %></th>
+          <% end %>
+          <% if @niigata10 > 0 %>
+            <th><strong><%= @niigata10 %></strong></th>
+          <% else %>
+            <th><%= @niigata10 %></th>
+          <% end %>
+          <% if @niigata11 > 0 %>
+            <th><strong><%= @niigata11 %></strong></th>
+          <% else %>
+            <th><%= @niigata11 %></th>
+          <% end %>
+          <% if @niigata12 > 0 %>
+            <th><strong><%= @niigata12 %></strong></th>
+          <% else %>
+            <th><%= @niigata12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "富山県" %>
+          <% if @toyama1 > 0 %>
+            <th><strong><%= @toyama1 %></strong></th>
+          <% else %>
+            <th><%= @toyama1 %></th>
+          <% end %>
+          <% if @toyama2 > 0 %>
+            <th><strong><%= @toyama2 %></strong></th>
+          <% else %>
+            <th><%= @toyama2 %></th>
+          <% end %>
+          <% if @toyama3 > 0 %>
+            <th><strong><%= @toyama3 %></strong></th>
+          <% else %>
+            <th><%= @toyama3 %></th>
+          <% end %>
+          <% if @toyama4 > 0 %>
+            <th><strong><%= @toyama4 %></strong></th>
+          <% else %>
+            <th><%= @toyama4 %></th>
+          <% end %>
+          <% if @toyama5 > 0 %>
+            <th><strong><%= @toyama5 %></strong></th>
+          <% else %>
+            <th><%= @toyama5 %></th>
+          <% end %>
+          <% if @toyama6 > 0 %>
+            <th><strong><%= @toyama6 %></strong></th>
+          <% else %>
+            <th><%= @toyama6 %></th>
+          <% end %>
+          <% if @toyama7 > 0 %>
+            <th><strong><%= @toyama7 %></strong></th>
+          <% else %>
+            <th><%= @toyama7 %></th>
+          <% end %>
+          <% if @toyama8 > 0 %>
+            <th><strong><%= @toyama8 %></strong></th>
+          <% else %>
+            <th><%= @toyama8 %></th>
+          <% end %>
+          <% if @toyama9 > 0 %>
+            <th><strong><%= @toyama9 %></strong></th>
+          <% else %>
+            <th><%= @toyama9 %></th>
+          <% end %>
+          <% if @toyama10 > 0 %>
+            <th><strong><%= @toyama10 %></strong></th>
+          <% else %>
+            <th><%= @toyama10 %></th>
+          <% end %>
+          <% if @toyama11 > 0 %>
+            <th><strong><%= @toyama11 %></strong></th>
+          <% else %>
+            <th><%= @toyama11 %></th>
+          <% end %>
+          <% if @toyama12 > 0 %>
+            <th><strong><%= @toyama12 %></strong></th>
+          <% else %>
+            <th><%= @toyama12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "石川県" %>
+          <% if @ishikawa1 > 0 %>
+            <th><strong><%= @ishikawa1 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa1 %></th>
+          <% end %>
+          <% if @ishikawa2 > 0 %>
+            <th><strong><%= @ishikawa2 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa2 %></th>
+          <% end %>
+          <% if @ishikawa3 > 0 %>
+            <th><strong><%= @ishikawa3 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa3 %></th>
+          <% end %>
+          <% if @ishikawa4 > 0 %>
+            <th><strong><%= @ishikawa4 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa4 %></th>
+          <% end %>
+          <% if @ishikawa5 > 0 %>
+            <th><strong><%= @ishikawa5 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa5 %></th>
+          <% end %>
+          <% if @ishikawa6 > 0 %>
+            <th><strong><%= @ishikawa6 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa6 %></th>
+          <% end %>
+          <% if @ishikawa7 > 0 %>
+            <th><strong><%= @ishikawa7 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa7 %></th>
+          <% end %>
+          <% if @ishikawa8 > 0 %>
+            <th><strong><%= @ishikawa8 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa8 %></th>
+          <% end %>
+          <% if @ishikawa9 > 0 %>
+            <th><strong><%= @ishikawa9 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa9 %></th>
+          <% end %>
+          <% if @ishikawa10 > 0 %>
+            <th><strong><%= @ishikawa10 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa10 %></th>
+          <% end %>
+          <% if @ishikawa11 > 0 %>
+            <th><strong><%= @ishikawa11 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa11 %></th>
+          <% end %>
+          <% if @ishikawa12 > 0 %>
+            <th><strong><%= @ishikawa12 %></strong></th>
+          <% else %>
+            <th><%= @ishikawa12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "福井県" %>
+          <% if @fukui1 > 0 %>
+            <th><strong><%= @fukui1 %></strong></th>
+          <% else %>
+            <th><%= @fukui1 %></th>
+          <% end %>
+          <% if @fukui2 > 0 %>
+            <th><strong><%= @fukui2 %></strong></th>
+          <% else %>
+            <th><%= @fukui2 %></th>
+          <% end %>
+          <% if @fukui3 > 0 %>
+            <th><strong><%= @fukui3 %></strong></th>
+          <% else %>
+            <th><%= @fukui3 %></th>
+          <% end %>
+          <% if @fukui4 > 0 %>
+            <th><strong><%= @fukui4 %></strong></th>
+          <% else %>
+            <th><%= @fukui4 %></th>
+          <% end %>
+          <% if @fukui5 > 0 %>
+            <th><strong><%= @fukui5 %></strong></th>
+          <% else %>
+            <th><%= @fukui5 %></th>
+          <% end %>
+          <% if @fukui6 > 0 %>
+            <th><strong><%= @fukui6 %></strong></th>
+          <% else %>
+            <th><%= @fukui6 %></th>
+          <% end %>
+          <% if @fukui7 > 0 %>
+            <th><strong><%= @fukui7 %></strong></th>
+          <% else %>
+            <th><%= @fukui7 %></th>
+          <% end %>
+          <% if @fukui8 > 0 %>
+            <th><strong><%= @fukui8 %></strong></th>
+          <% else %>
+            <th><%= @fukui8 %></th>
+          <% end %>
+          <% if @fukui9 > 0 %>
+            <th><strong><%= @fukui9 %></strong></th>
+          <% else %>
+            <th><%= @fukui9 %></th>
+          <% end %>
+          <% if @fukui10 > 0 %>
+            <th><strong><%= @fukui10 %></strong></th>
+          <% else %>
+            <th><%= @fukui10 %></th>
+          <% end %>
+          <% if @fukui11 > 0 %>
+            <th><strong><%= @fukui11 %></strong></th>
+          <% else %>
+            <th><%= @fukui11 %></th>
+          <% end %>
+          <% if @fukui12 > 0 %>
+            <th><strong><%= @fukui12 %></strong></th>
+          <% else %>
+            <th><%= @fukui12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "山梨県" %>
+          <% if @yamanashi1 > 0 %>
+            <th><strong><%= @yamanashi1 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi1 %></th>
+          <% end %>
+          <% if @yamanashi2 > 0 %>
+            <th><strong><%= @yamanashi2 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi2 %></th>
+          <% end %>
+          <% if @yamanashi3 > 0 %>
+            <th><strong><%= @yamanashi3 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi3 %></th>
+          <% end %>
+          <% if @yamanashi4 > 0 %>
+            <th><strong><%= @yamanashi4 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi4 %></th>
+          <% end %>
+          <% if @yamanashi5 > 0 %>
+            <th><strong><%= @yamanashi5 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi5 %></th>
+          <% end %>
+          <% if @yamanashi6 > 0 %>
+            <th><strong><%= @yamanashi6 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi6 %></th>
+          <% end %>
+          <% if @yamanashi7 > 0 %>
+            <th><strong><%= @yamanashi7 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi7 %></th>
+          <% end %>
+          <% if @yamanashi8 > 0 %>
+            <th><strong><%= @yamanashi8 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi8 %></th>
+          <% end %>
+          <% if @yamanashi9 > 0 %>
+            <th><strong><%= @yamanashi9 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi9 %></th>
+          <% end %>
+          <% if @yamanashi10 > 0 %>
+            <th><strong><%= @yamanashi10 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi10 %></th>
+          <% end %>
+          <% if @yamanashi11 > 0 %>
+            <th><strong><%= @yamanashi11 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi11 %></th>
+          <% end %>
+          <% if @yamanashi12 > 0 %>
+            <th><strong><%= @yamanashi12 %></strong></th>
+          <% else %>
+            <th><%= @yamanashi12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "長野県" %>
+          <% if @nagano1 > 0 %>
+            <th><strong><%= @nagano1 %></strong></th>
+          <% else %>
+            <th><%= @nagano1 %></th>
+          <% end %>
+          <% if @nagano2 > 0 %>
+            <th><strong><%= @nagano2 %></strong></th>
+          <% else %>
+            <th><%= @nagano2 %></th>
+          <% end %>
+          <% if @nagano3 > 0 %>
+            <th><strong><%= @nagano3 %></strong></th>
+          <% else %>
+            <th><%= @nagano3 %></th>
+          <% end %>
+          <% if @nagano4 > 0 %>
+            <th><strong><%= @nagano4 %></strong></th>
+          <% else %>
+            <th><%= @nagano4 %></th>
+          <% end %>
+          <% if @nagano5 > 0 %>
+            <th><strong><%= @nagano5 %></strong></th>
+          <% else %>
+            <th><%= @nagano5 %></th>
+          <% end %>
+          <% if @nagano6 > 0 %>
+            <th><strong><%= @nagano6 %></strong></th>
+          <% else %>
+            <th><%= @nagano6 %></th>
+          <% end %>
+          <% if @nagano7 > 0 %>
+            <th><strong><%= @nagano7 %></strong></th>
+          <% else %>
+            <th><%= @nagano7 %></th>
+          <% end %>
+          <% if @nagano8 > 0 %>
+            <th><strong><%= @nagano8 %></strong></th>
+          <% else %>
+            <th><%= @nagano8 %></th>
+          <% end %>
+          <% if @nagano9 > 0 %>
+            <th><strong><%= @nagano9 %></strong></th>
+          <% else %>
+            <th><%= @nagano9 %></th>
+          <% end %>
+          <% if @nagano10 > 0 %>
+            <th><strong><%= @nagano10 %></strong></th>
+          <% else %>
+            <th><%= @nagano10 %></th>
+          <% end %>
+          <% if @nagano11 > 0 %>
+            <th><strong><%= @nagano11 %></strong></th>
+          <% else %>
+            <th><%= @nagano11 %></th>
+          <% end %>
+          <% if @nagano12 > 0 %>
+            <th><strong><%= @nagano12 %></strong></th>
+          <% else %>
+            <th><%= @nagano12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "岐阜県" %>
+          <% if @gifu1 > 0 %>
+            <th><strong><%= @gifu1 %></strong></th>
+          <% else %>
+            <th><%= @gifu1 %></th>
+          <% end %>
+          <% if @gifu2 > 0 %>
+            <th><strong><%= @gifu2 %></strong></th>
+          <% else %>
+            <th><%= @gifu2 %></th>
+          <% end %>
+          <% if @gifu3 > 0 %>
+            <th><strong><%= @gifu3 %></strong></th>
+          <% else %>
+            <th><%= @gifu3 %></th>
+          <% end %>
+          <% if @gifu4 > 0 %>
+            <th><strong><%= @gifu4 %></strong></th>
+          <% else %>
+            <th><%= @gifu4 %></th>
+          <% end %>
+          <% if @gifu5 > 0 %>
+            <th><strong><%= @gifu5 %></strong></th>
+          <% else %>
+            <th><%= @gifu5 %></th>
+          <% end %>
+          <% if @gifu6 > 0 %>
+            <th><strong><%= @gifu6 %></strong></th>
+          <% else %>
+            <th><%= @gifu6 %></th>
+          <% end %>
+          <% if @gifu7 > 0 %>
+            <th><strong><%= @gifu7 %></strong></th>
+          <% else %>
+            <th><%= @gifu7 %></th>
+          <% end %>
+          <% if @gifu8 > 0 %>
+            <th><strong><%= @gifu8 %></strong></th>
+          <% else %>
+            <th><%= @gifu8 %></th>
+          <% end %>
+          <% if @gifu9 > 0 %>
+            <th><strong><%= @gifu9 %></strong></th>
+          <% else %>
+            <th><%= @gifu9 %></th>
+          <% end %>
+          <% if @gifu10 > 0 %>
+            <th><strong><%= @gifu10 %></strong></th>
+          <% else %>
+            <th><%= @gifu10 %></th>
+          <% end %>
+          <% if @gifu11 > 0 %>
+            <th><strong><%= @gifu11 %></strong></th>
+          <% else %>
+            <th><%= @gifu11 %></th>
+          <% end %>
+          <% if @gifu12 > 0 %>
+            <th><strong><%= @gifu12 %></strong></th>
+          <% else %>
+            <th><%= @gifu12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "静岡県" %>
+          <% if @shizuoka1 > 0 %>
+            <th><strong><%= @shizuoka1 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka1 %></th>
+          <% end %>
+          <% if @shizuoka2 > 0 %>
+            <th><strong><%= @shizuoka2 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka2 %></th>
+          <% end %>
+          <% if @shizuoka3 > 0 %>
+            <th><strong><%= @shizuoka3 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka3 %></th>
+          <% end %>
+          <% if @shizuoka4 > 0 %>
+            <th><strong><%= @shizuoka4 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka4 %></th>
+          <% end %>
+          <% if @shizuoka5 > 0 %>
+            <th><strong><%= @shizuoka5 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka5 %></th>
+          <% end %>
+          <% if @shizuoka6 > 0 %>
+            <th><strong><%= @shizuoka6 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka6 %></th>
+          <% end %>
+          <% if @shizuoka7 > 0 %>
+            <th><strong><%= @shizuoka7 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka7 %></th>
+          <% end %>
+          <% if @shizuoka8 > 0 %>
+            <th><strong><%= @shizuoka8 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka8 %></th>
+          <% end %>
+          <% if @shizuoka9 > 0 %>
+            <th><strong><%= @shizuoka9 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka9 %></th>
+          <% end %>
+          <% if @shizuoka10 > 0 %>
+            <th><strong><%= @shizuoka10 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka10 %></th>
+          <% end %>
+          <% if @shizuoka11 > 0 %>
+            <th><strong><%= @shizuoka11 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka11 %></th>
+          <% end %>
+          <% if @shizuoka12 > 0 %>
+            <th><strong><%= @shizuoka12 %></strong></th>
+          <% else %>
+            <th><%= @shizuoka12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "愛知県" %>
+          <% if @aichi1 > 0 %>
+            <th><strong><%= @aichi1 %></strong></th>
+          <% else %>
+            <th><%= @aichi1 %></th>
+          <% end %>
+          <% if @aichi2 > 0 %>
+            <th><strong><%= @aichi2 %></strong></th>
+          <% else %>
+            <th><%= @aichi2 %></th>
+          <% end %>
+          <% if @aichi3 > 0 %>
+            <th><strong><%= @aichi3 %></strong></th>
+          <% else %>
+            <th><%= @aichi3 %></th>
+          <% end %>
+          <% if @aichi4 > 0 %>
+            <th><strong><%= @aichi4 %></strong></th>
+          <% else %>
+            <th><%= @aichi4 %></th>
+          <% end %>
+          <% if @aichi5 > 0 %>
+            <th><strong><%= @aichi5 %></strong></th>
+          <% else %>
+            <th><%= @aichi5 %></th>
+          <% end %>
+          <% if @aichi6 > 0 %>
+            <th><strong><%= @aichi6 %></strong></th>
+          <% else %>
+            <th><%= @aichi6 %></th>
+          <% end %>
+          <% if @aichi7 > 0 %>
+            <th><strong><%= @aichi7 %></strong></th>
+          <% else %>
+            <th><%= @aichi7 %></th>
+          <% end %>
+          <% if @aichi8 > 0 %>
+            <th><strong><%= @aichi8 %></strong></th>
+          <% else %>
+            <th><%= @aichi8 %></th>
+          <% end %>
+          <% if @aichi9 > 0 %>
+            <th><strong><%= @aichi9 %></strong></th>
+          <% else %>
+            <th><%= @aichi9 %></th>
+          <% end %>
+          <% if @aichi10 > 0 %>
+            <th><strong><%= @aichi10 %></strong></th>
+          <% else %>
+            <th><%= @aichi10 %></th>
+          <% end %>
+          <% if @aichi11 > 0 %>
+            <th><strong><%= @aichi11 %></strong></th>
+          <% else %>
+            <th><%= @aichi11 %></th>
+          <% end %>
+          <% if @aichi12 > 0 %>
+            <th><strong><%= @aichi12 %></strong></th>
+          <% else %>
+            <th><%= @aichi12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "三重県" %>
+          <% if @mie1 > 0 %>
+            <th><strong><%= @mie1 %></strong></th>
+          <% else %>
+            <th><%= @mie1 %></th>
+          <% end %>
+          <% if @mie2 > 0 %>
+            <th><strong><%= @mie2 %></strong></th>
+          <% else %>
+            <th><%= @mie2 %></th>
+          <% end %>
+          <% if @mie3 > 0 %>
+            <th><strong><%= @mie3 %></strong></th>
+          <% else %>
+            <th><%= @mie3 %></th>
+          <% end %>
+          <% if @mie4 > 0 %>
+            <th><strong><%= @mie4 %></strong></th>
+          <% else %>
+            <th><%= @mie4 %></th>
+          <% end %>
+          <% if @mie5 > 0 %>
+            <th><strong><%= @mie5 %></strong></th>
+          <% else %>
+            <th><%= @mie5 %></th>
+          <% end %>
+          <% if @mie6 > 0 %>
+            <th><strong><%= @mie6 %></strong></th>
+          <% else %>
+            <th><%= @mie6 %></th>
+          <% end %>
+          <% if @mie7 > 0 %>
+            <th><strong><%= @mie7 %></strong></th>
+          <% else %>
+            <th><%= @mie7 %></th>
+          <% end %>
+          <% if @mie8 > 0 %>
+            <th><strong><%= @mie8 %></strong></th>
+          <% else %>
+            <th><%= @mie8 %></th>
+          <% end %>
+          <% if @mie9 > 0 %>
+            <th><strong><%= @mie9 %></strong></th>
+          <% else %>
+            <th><%= @mie9 %></th>
+          <% end %>
+          <% if @mie10 > 0 %>
+            <th><strong><%= @mie10 %></strong></th>
+          <% else %>
+            <th><%= @mie10 %></th>
+          <% end %>
+          <% if @mie11 > 0 %>
+            <th><strong><%= @mie11 %></strong></th>
+          <% else %>
+            <th><%= @mie11 %></th>
+          <% end %>
+          <% if @mie12 > 0 %>
+            <th><strong><%= @mie12 %></strong></th>
+          <% else %>
+            <th><%= @mie12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "滋賀県" %>
+          <% if @shiga1 > 0 %>
+            <th><strong><%= @shiga1 %></strong></th>
+          <% else %>
+            <th><%= @shiga1 %></th>
+          <% end %>
+          <% if @shiga2 > 0 %>
+            <th><strong><%= @shiga2 %></strong></th>
+          <% else %>
+            <th><%= @shiga2 %></th>
+          <% end %>
+          <% if @shiga3 > 0 %>
+            <th><strong><%= @shiga3 %></strong></th>
+          <% else %>
+            <th><%= @shiga3 %></th>
+          <% end %>
+          <% if @shiga4 > 0 %>
+            <th><strong><%= @shiga4 %></strong></th>
+          <% else %>
+            <th><%= @shiga4 %></th>
+          <% end %>
+          <% if @shiga5 > 0 %>
+            <th><strong><%= @shiga5 %></strong></th>
+          <% else %>
+            <th><%= @shiga5 %></th>
+          <% end %>
+          <% if @shiga6 > 0 %>
+            <th><strong><%= @shiga6 %></strong></th>
+          <% else %>
+            <th><%= @shiga6 %></th>
+          <% end %>
+          <% if @shiga7 > 0 %>
+            <th><strong><%= @shiga7 %></strong></th>
+          <% else %>
+            <th><%= @shiga7 %></th>
+          <% end %>
+          <% if @shiga8 > 0 %>
+            <th><strong><%= @shiga8 %></strong></th>
+          <% else %>
+            <th><%= @shiga8 %></th>
+          <% end %>
+          <% if @shiga9 > 0 %>
+            <th><strong><%= @shiga9 %></strong></th>
+          <% else %>
+            <th><%= @shiga9 %></th>
+          <% end %>
+          <% if @shiga10 > 0 %>
+            <th><strong><%= @shiga10 %></strong></th>
+          <% else %>
+            <th><%= @shiga10 %></th>
+          <% end %>
+          <% if @shiga11 > 0 %>
+            <th><strong><%= @shiga11 %></strong></th>
+          <% else %>
+            <th><%= @shiga11 %></th>
+          <% end %>
+          <% if @shiga12 > 0 %>
+            <th><strong><%= @shiga12 %></strong></th>
+          <% else %>
+            <th><%= @shiga12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "京都府" %>
+          <% if @kyoto1 > 0 %>
+            <th><strong><%= @kyoto1 %></strong></th>
+          <% else %>
+            <th><%= @kyoto1 %></th>
+          <% end %>
+          <% if @kyoto2 > 0 %>
+            <th><strong><%= @kyoto2 %></strong></th>
+          <% else %>
+            <th><%= @kyoto2 %></th>
+          <% end %>
+          <% if @kyoto3 > 0 %>
+            <th><strong><%= @kyoto3 %></strong></th>
+          <% else %>
+            <th><%= @kyoto3 %></th>
+          <% end %>
+          <% if @kyoto4 > 0 %>
+            <th><strong><%= @kyoto4 %></strong></th>
+          <% else %>
+            <th><%= @kyoto4 %></th>
+          <% end %>
+          <% if @kyoto5 > 0 %>
+            <th><strong><%= @kyoto5 %></strong></th>
+          <% else %>
+            <th><%= @kyoto5 %></th>
+          <% end %>
+          <% if @kyoto6 > 0 %>
+            <th><strong><%= @kyoto6 %></strong></th>
+          <% else %>
+            <th><%= @kyoto6 %></th>
+          <% end %>
+          <% if @kyoto7 > 0 %>
+            <th><strong><%= @kyoto7 %></strong></th>
+          <% else %>
+            <th><%= @kyoto7 %></th>
+          <% end %>
+          <% if @kyoto8 > 0 %>
+            <th><strong><%= @kyoto8 %></strong></th>
+          <% else %>
+            <th><%= @kyoto8 %></th>
+          <% end %>
+          <% if @kyoto9 > 0 %>
+            <th><strong><%= @kyoto9 %></strong></th>
+          <% else %>
+            <th><%= @kyoto9 %></th>
+          <% end %>
+          <% if @kyoto10 > 0 %>
+            <th><strong><%= @kyoto10 %></strong></th>
+          <% else %>
+            <th><%= @kyoto10 %></th>
+          <% end %>
+          <% if @kyoto11 > 0 %>
+            <th><strong><%= @kyoto11 %></strong></th>
+          <% else %>
+            <th><%= @kyoto11 %></th>
+          <% end %>
+          <% if @kyoto12 > 0 %>
+            <th><strong><%= @kyoto12 %></strong></th>
+          <% else %>
+            <th><%= @kyoto12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "大阪府" %>
+          <% if @oosaka1 > 0 %>
+            <th><strong><%= @oosaka1 %></strong></th>
+          <% else %>
+            <th><%= @oosaka1 %></th>
+          <% end %>
+          <% if @oosaka2 > 0 %>
+            <th><strong><%= @oosaka2 %></strong></th>
+          <% else %>
+            <th><%= @oosaka2 %></th>
+          <% end %>
+          <% if @oosaka3 > 0 %>
+            <th><strong><%= @oosaka3 %></strong></th>
+          <% else %>
+            <th><%= @oosaka3 %></th>
+          <% end %>
+          <% if @oosaka4 > 0 %>
+            <th><strong><%= @oosaka4 %></strong></th>
+          <% else %>
+            <th><%= @oosaka4 %></th>
+          <% end %>
+          <% if @oosaka5 > 0 %>
+            <th><strong><%= @oosaka5 %></strong></th>
+          <% else %>
+            <th><%= @oosaka5 %></th>
+          <% end %>
+          <% if @oosaka6 > 0 %>
+            <th><strong><%= @oosaka6 %></strong></th>
+          <% else %>
+            <th><%= @oosaka6 %></th>
+          <% end %>
+          <% if @oosaka7> 0 %>
+            <th><strong><%= @oosaka7 %></strong></th>
+          <% else %>
+            <th><%= @oosaka7 %></th>
+          <% end %>
+          <% if @oosaka8 > 0 %>
+            <th><strong><%= @oosaka8 %></strong></th>
+          <% else %>
+            <th><%= @oosaka8 %></th>
+          <% end %>
+          <% if @oosaka9 > 0 %>
+            <th><strong><%= @oosaka9 %></strong></th>
+          <% else %>
+            <th><%= @oosaka9 %></th>
+          <% end %>
+          <% if @oosaka10 > 0 %>
+            <th><strong><%= @oosaka10 %></strong></th>
+          <% else %>
+            <th><%= @oosaka10 %></th>
+          <% end %>
+          <% if @oosaka11 > 0 %>
+            <th><strong><%= @oosaka11 %></strong></th>
+          <% else %>
+            <th><%= @oosaka11 %></th>
+          <% end %>
+          <% if @oosaka12 > 0 %>
+            <th><strong><%= @oosaka12 %></strong></th>
+          <% else %>
+            <th><%= @oosaka12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "兵庫県" %>
+          <% if @hyougo1 > 0 %>
+            <th><strong><%= @hyougo1 %></strong></th>
+          <% else %>
+            <th><%= @hyougo1 %></th>
+          <% end %>
+          <% if @hyougo2 > 0 %>
+            <th><strong><%= @hyougo2 %></strong></th>
+          <% else %>
+            <th><%= @hyougo2 %></th>
+          <% end %>
+          <% if @hyougo3 > 0 %>
+            <th><strong><%= @hyougo3 %></strong></th>
+          <% else %>
+            <th><%= @hyougo3 %></th>
+          <% end %>
+          <% if @hyougo4 > 0 %>
+            <th><strong><%= @hyougo4 %></strong></th>
+          <% else %>
+            <th><%= @hyougo4 %></th>
+          <% end %>
+          <% if @hyougo5 > 0 %>
+            <th><strong><%= @hyougo5 %></strong></th>
+          <% else %>
+            <th><%= @hyougo5 %></th>
+          <% end %>
+          <% if @hyougo6 > 0 %>
+            <th><strong><%= @hyougo6 %></strong></th>
+          <% else %>
+            <th><%= @hyougo6 %></th>
+          <% end %>
+          <% if @hyougo7 > 0 %>
+            <th><strong><%= @hyougo7 %></strong></th>
+          <% else %>
+            <th><%= @hyougo7 %></th>
+          <% end %>
+          <% if @hyougo8 > 0 %>
+            <th><strong><%= @hyougo8 %></strong></th>
+          <% else %>
+            <th><%= @hyougo8 %></th>
+          <% end %>
+          <% if @hyougo9 > 0 %>
+            <th><strong><%= @hyougo9 %></strong></th>
+          <% else %>
+            <th><%= @hyougo9 %></th>
+          <% end %>
+          <% if @hyougo10 > 0 %>
+            <th><strong><%= @hyougo10 %></strong></th>
+          <% else %>
+            <th><%= @hyougo10 %></th>
+          <% end %>
+          <% if @hyougo11 > 0 %>
+            <th><strong><%= @hyougo11 %></strong></th>
+          <% else %>
+            <th><%= @hyougo11 %></th>
+          <% end %>
+          <% if @hyougo12 > 0 %>
+            <th><strong><%= @hyougo12 %></strong></th>
+          <% else %>
+            <th><%= @hyougo12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "奈良県" %>
+          <% if @nara1 > 0 %>
+            <th><strong><%= @nara1 %></strong></th>
+          <% else %>
+            <th><%= @nara1 %></th>
+          <% end %>
+          <% if @nara2 > 0 %>
+            <th><strong><%= @nara2 %></strong></th>
+          <% else %>
+            <th><%= @nara2 %></th>
+          <% end %>
+          <% if @nara3 > 0 %>
+            <th><strong><%= @nara3 %></strong></th>
+          <% else %>
+            <th><%= @nara3 %></th>
+          <% end %>
+          <% if @nara4 > 0 %>
+            <th><strong><%= @nara4 %></strong></th>
+          <% else %>
+            <th><%= @nara4 %></th>
+          <% end %>
+          <% if @nara5 > 0 %>
+            <th><strong><%= @nara5 %></strong></th>
+          <% else %>
+            <th><%= @nara5 %></th>
+          <% end %>
+          <% if @nara6 > 0 %>
+            <th><strong><%= @nara6 %></strong></th>
+          <% else %>
+            <th><%= @nara6 %></th>
+          <% end %>
+          <% if @nara7 > 0 %>
+            <th><strong><%= @nara7 %></strong></th>
+          <% else %>
+            <th><%= @nara7 %></th>
+          <% end %>
+          <% if @nara8 > 0 %>
+            <th><strong><%= @nara8 %></strong></th>
+          <% else %>
+            <th><%= @nara8 %></th>
+          <% end %>
+          <% if @nara9 > 0 %>
+            <th><strong><%= @nara9 %></strong></th>
+          <% else %>
+            <th><%= @nara9 %></th>
+          <% end %>
+          <% if @nara10 > 0 %>
+            <th><strong><%= @nara10 %></strong></th>
+          <% else %>
+            <th><%= @nara10 %></th>
+          <% end %>
+          <% if @nara11 > 0 %>
+            <th><strong><%= @nara11 %></strong></th>
+          <% else %>
+            <th><%= @nara11 %></th>
+          <% end %>
+          <% if @nara12 > 0 %>
+            <th><strong><%= @nara12 %></strong></th>
+          <% else %>
+            <th><%= @nara12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "和歌山県" %>
+          <% if @wakayama1 > 0 %>
+            <th><strong><%= @wakayama1 %></strong></th>
+          <% else %>
+            <th><%= @wakayama1 %></th>
+          <% end %>
+          <% if @wakayama2 > 0 %>
+            <th><strong><%= @wakayama2 %></strong></th>
+          <% else %>
+            <th><%= @wakayama2 %></th>
+          <% end %>
+          <% if @wakayama3 > 0 %>
+            <th><strong><%= @wakayama3 %></strong></th>
+          <% else %>
+            <th><%= @wakayama3 %></th>
+          <% end %>
+          <% if @wakayama4 > 0 %>
+            <th><strong><%= @wakayama4 %></strong></th>
+          <% else %>
+            <th><%= @wakayama4 %></th>
+          <% end %>
+          <% if @wakayama5 > 0 %>
+            <th><strong><%= @wakayama5 %></strong></th>
+          <% else %>
+            <th><%= @wakayama5 %></th>
+          <% end %>
+          <% if @wakayama6 > 0 %>
+            <th><strong><%= @wakayama6 %></strong></th>
+          <% else %>
+            <th><%= @wakayama6 %></th>
+          <% end %>
+          <% if @wakayama7 > 0 %>
+            <th><strong><%= @wakayama7 %></strong></th>
+          <% else %>
+            <th><%= @wakayama7 %></th>
+          <% end %>
+          <% if @wakayama8 > 0 %>
+            <th><strong><%= @wakayama8 %></strong></th>
+          <% else %>
+            <th><%= @wakayama8 %></th>
+          <% end %>
+          <% if @wakayama9 > 0 %>
+            <th><strong><%= @wakayama9 %></strong></th>
+          <% else %>
+            <th><%= @wakayama9 %></th>
+          <% end %>
+          <% if @wakayama10 > 0 %>
+            <th><strong><%= @wakayama10 %></strong></th>
+          <% else %>
+            <th><%= @wakayama10 %></th>
+          <% end %>
+          <% if @wakayama11 > 0 %>
+            <th><strong><%= @wakayama11 %></strong></th>
+          <% else %>
+            <th><%= @wakayama11 %></th>
+          <% end %>
+          <% if @wakayama12 > 0 %>
+            <th><strong><%= @wakayama12 %></strong></th>
+          <% else %>
+            <th><%= @wakayama12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "鳥取県" %>
+          <% if @tottori1 > 0 %>
+            <th><strong><%= @tottori1 %></strong></th>
+          <% else %>
+            <th><%= @tottori1 %></th>
+          <% end %>
+          <% if @tottori2 > 0 %>
+            <th><strong><%= @tottori2 %></strong></th>
+          <% else %>
+            <th><%= @tottori2 %></th>
+          <% end %>
+          <% if @tottori3 > 0 %>
+            <th><strong><%= @tottori3 %></strong></th>
+          <% else %>
+            <th><%= @tottori3 %></th>
+          <% end %>
+          <% if @tottori4 > 0 %>
+            <th><strong><%= @tottori4 %></strong></th>
+          <% else %>
+            <th><%= @tottori4 %></th>
+          <% end %>
+          <% if @tottori5 > 0 %>
+            <th><strong><%= @tottori5 %></strong></th>
+          <% else %>
+            <th><%= @tottori5 %></th>
+          <% end %>
+          <% if @tottori6 > 0 %>
+            <th><strong><%= @tottori6 %></strong></th>
+          <% else %>
+            <th><%= @tottori6 %></th>
+          <% end %>
+          <% if @tottori7 > 0 %>
+            <th><strong><%= @tottori7 %></strong></th>
+          <% else %>
+            <th><%= @tottori7 %></th>
+          <% end %>
+          <% if @tottori8 > 0 %>
+            <th><strong><%= @tottori8 %></strong></th>
+          <% else %>
+            <th><%= @tottori8 %></th>
+          <% end %>
+          <% if @tottori9 > 0 %>
+            <th><strong><%= @tottori9 %></strong></th>
+          <% else %>
+            <th><%= @tottori9 %></th>
+          <% end %>
+          <% if @tottori10 > 0 %>
+            <th><strong><%= @tottori10 %></strong></th>
+          <% else %>
+            <th><%= @tottori10 %></th>
+          <% end %>
+          <% if @tottori11 > 0 %>
+            <th><strong><%= @tottori11 %></strong></th>
+          <% else %>
+            <th><%= @tottori11 %></th>
+          <% end %>
+          <% if @tottori12 > 0 %>
+            <th><strong><%= @tottori12 %></strong></th>
+          <% else %>
+            <th><%= @tottori12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "島根県" %>
+          <% if @shimane1 > 0 %>
+            <th><strong><%= @shimane1 %></strong></th>
+          <% else %>
+            <th><%= @shimane1 %></th>
+          <% end %>
+          <% if @shimane2 > 0 %>
+            <th><strong><%= @shimane2 %></strong></th>
+          <% else %>
+            <th><%= @shimane2 %></th>
+          <% end %>
+          <% if @shimane3 > 0 %>
+            <th><strong><%= @shimane3 %></strong></th>
+          <% else %>
+            <th><%= @shimane3 %></th>
+          <% end %>
+          <% if @shimane4 > 0 %>
+            <th><strong><%= @shimane4 %></strong></th>
+          <% else %>
+            <th><%= @shimane4 %></th>
+          <% end %>
+          <% if @shimane5 > 0 %>
+            <th><strong><%= @shimane5 %></strong></th>
+          <% else %>
+            <th><%= @shimane5 %></th>
+          <% end %>
+          <% if @shimane6 > 0 %>
+            <th><strong><%= @shimane6 %></strong></th>
+          <% else %>
+            <th><%= @shimane6 %></th>
+          <% end %>
+          <% if @shimane7 > 0 %>
+            <th><strong><%= @shimane7 %></strong></th>
+          <% else %>
+            <th><%= @shimane7 %></th>
+          <% end %>
+          <% if @shimane8 > 0 %>
+            <th><strong><%= @shimane8 %></strong></th>
+          <% else %>
+            <th><%= @shimane8 %></th>
+          <% end %>
+          <% if @shimane9 > 0 %>
+            <th><strong><%= @shimane9 %></strong></th>
+          <% else %>
+            <th><%= @shimane9 %></th>
+          <% end %>
+          <% if @shimane10 > 0 %>
+            <th><strong><%= @shimane10 %></strong></th>
+          <% else %>
+            <th><%= @shimane10 %></th>
+          <% end %>
+          <% if @shimane11 > 0 %>
+            <th><strong><%= @shimane11 %></strong></th>
+          <% else %>
+            <th><%= @shimane11 %></th>
+          <% end %>
+          <% if @shimane12 > 0 %>
+            <th><strong><%= @shimane12 %></strong></th>
+          <% else %>
+            <th><%= @shimane12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "岡山県" %>
+          <% if @okayama1 > 0 %>
+            <th><strong><%= @okayama1 %></strong></th>
+          <% else %>
+            <th><%= @okayama1 %></th>
+          <% end %>
+          <% if @okayama2 > 0 %>
+            <th><strong><%= @okayama2 %></strong></th>
+          <% else %>
+            <th><%= @okayama2 %></th>
+          <% end %>
+          <% if @okayama3 > 0 %>
+            <th><strong><%= @okayama3 %></strong></th>
+          <% else %>
+            <th><%= @okayama3 %></th>
+          <% end %>
+          <% if @okayama4 > 0 %>
+            <th><strong><%= @okayama4 %></strong></th>
+          <% else %>
+            <th><%= @okayama4 %></th>
+          <% end %>
+          <% if @okayama5 > 0 %>
+            <th><strong><%= @okayama5 %></strong></th>
+          <% else %>
+            <th><%= @okayama5 %></th>
+          <% end %>
+          <% if @okayama6 > 0 %>
+            <th><strong><%= @okayama6 %></strong></th>
+          <% else %>
+            <th><%= @okayama6 %></th>
+          <% end %>
+          <% if @okayama7 > 0 %>
+            <th><strong><%= @okayama7 %></strong></th>
+          <% else %>
+            <th><%= @okayama7 %></th>
+          <% end %>
+          <% if @okayama8 > 0 %>
+            <th><strong><%= @okayama8 %></strong></th>
+          <% else %>
+            <th><%= @okayama8 %></th>
+          <% end %>
+          <% if @okayama9 > 0 %>
+            <th><strong><%= @okayama9 %></strong></th>
+          <% else %>
+            <th><%= @okayama9 %></th>
+          <% end %>
+          <% if @okayama10 > 0 %>
+            <th><strong><%= @okayama10 %></strong></th>
+          <% else %>
+            <th><%= @okayama10 %></th>
+          <% end %>
+          <% if @okayama11 > 0 %>
+            <th><strong><%= @okayama11 %></strong></th>
+          <% else %>
+            <th><%= @okayama11 %></th>
+          <% end %>
+          <% if @okayama12 > 0 %>
+            <th><strong><%= @okayama12 %></strong></th>
+          <% else %>
+            <th><%= @okayama12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "広島県" %>
+          <% if @hiroshima1 > 0 %>
+            <th><strong><%= @hiroshima1 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima1 %></th>
+          <% end %>
+          <% if @hiroshima2 > 0 %>
+            <th><strong><%= @hiroshima2 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima2 %></th>
+          <% end %>
+          <% if @hiroshima3 > 0 %>
+            <th><strong><%= @hiroshima3 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima3 %></th>
+          <% end %>
+          <% if @hiroshima4 > 0 %>
+            <th><strong><%= @hiroshima4 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima4 %></th>
+          <% end %>
+          <% if @hiroshima5 > 0 %>
+            <th><strong><%= @hiroshima5 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima5 %></th>
+          <% end %>
+          <% if @hiroshima6 > 0 %>
+            <th><strong><%= @hiroshima6 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima6 %></th>
+          <% end %>
+          <% if @hiroshima7 > 0 %>
+            <th><strong><%= @hiroshima7 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima7 %></th>
+          <% end %>
+          <% if @hiroshima8 > 0 %>
+            <th><strong><%= @hiroshima8 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima8 %></th>
+          <% end %>
+          <% if @hiroshima9 > 0 %>
+            <th><strong><%= @hiroshima9 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima9 %></th>
+          <% end %>
+          <% if @hiroshima10 > 0 %>
+            <th><strong><%= @hiroshima10 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima10 %></th>
+          <% end %>
+          <% if @hiroshima11 > 0 %>
+            <th><strong><%= @hiroshima11 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima11 %></th>
+          <% end %>
+          <% if @hiroshima12 > 0 %>
+            <th><strong><%= @hiroshima12 %></strong></th>
+          <% else %>
+            <th><%= @hiroshima12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "山口県" %>
+          <% if @yamaguchi1 > 0 %>
+            <th><strong><%= @yamaguchi1 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi1 %></th>
+          <% end %>
+          <% if @yamaguchi2 > 0 %>
+            <th><strong><%= @yamaguchi2 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi2 %></th>
+          <% end %>
+          <% if @yamaguchi3 > 0 %>
+            <th><strong><%= @yamaguchi3 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi3 %></th>
+          <% end %>
+          <% if @yamaguchi4 > 0 %>
+            <th><strong><%= @yamaguchi4 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi4 %></th>
+          <% end %>
+          <% if @yamaguchi5 > 0 %>
+            <th><strong><%= @yamaguchi5 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi5 %></th>
+          <% end %>
+          <% if @yamaguchi6 > 0 %>
+            <th><strong><%= @yamaguchi6 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi6 %></th>
+          <% end %>
+          <% if @yamaguchi7 > 0 %>
+            <th><strong><%= @yamaguchi7 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi7 %></th>
+          <% end %>
+          <% if @yamaguchi8 > 0 %>
+            <th><strong><%= @yamaguchi8 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi8 %></th>
+          <% end %>
+          <% if @yamaguchi9 > 0 %>
+            <th><strong><%= @yamaguchi9 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi9 %></th>
+          <% end %>
+          <% if @yamaguchi10 > 0 %>
+            <th><strong><%= @yamaguchi10 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi10 %></th>
+          <% end %>
+          <% if @yamaguchi11 > 0 %>
+            <th><strong><%= @yamaguchi11 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi11 %></th>
+          <% end %>
+          <% if @yamaguchi12 > 0 %>
+            <th><strong><%= @yamaguchi12 %></strong></th>
+          <% else %>
+            <th><%= @yamaguchi12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "徳島県" %>
+          <% if @tokushima1 > 0 %>
+            <th><strong><%= @tokushima1 %></strong></th>
+          <% else %>
+            <th><%= @tokushima1 %></th>
+          <% end %>
+          <% if @tokushima2 > 0 %>
+            <th><strong><%= @tokushima2 %></strong></th>
+          <% else %>
+            <th><%= @tokushima2 %></th>
+          <% end %>
+          <% if @tokushima3 > 0 %>
+            <th><strong><%= @tokushima3 %></strong></th>
+          <% else %>
+            <th><%= @tokushima3 %></th>
+          <% end %>
+          <% if @tokushima4 > 0 %>
+            <th><strong><%= @tokushima4 %></strong></th>
+          <% else %>
+            <th><%= @tokushima4 %></th>
+          <% end %>
+          <% if @tokushima5 > 0 %>
+            <th><strong><%= @tokushima5 %></strong></th>
+          <% else %>
+            <th><%= @tokushima5 %></th>
+          <% end %>
+          <% if @tokushima6 > 0 %>
+            <th><strong><%= @tokushima6 %></strong></th>
+          <% else %>
+            <th><%= @tokushima6 %></th>
+          <% end %>
+          <% if @tokushima7 > 0 %>
+            <th><strong><%= @tokushima7 %></strong></th>
+          <% else %>
+            <th><%= @tokushima7 %></th>
+          <% end %>
+          <% if @tokushima8 > 0 %>
+            <th><strong><%= @tokushima8 %></strong></th>
+          <% else %>
+            <th><%= @tokushima8 %></th>
+          <% end %>
+          <% if @tokushima9 > 0 %>
+            <th><strong><%= @tokushima9 %></strong></th>
+          <% else %>
+            <th><%= @tokushima9 %></th>
+          <% end %>
+          <% if @tokushima10 > 0 %>
+            <th><strong><%= @tokushima10 %></strong></th>
+          <% else %>
+            <th><%= @tokushima10 %></th>
+          <% end %>
+          <% if @tokushima11 > 0 %>
+            <th><strong><%= @tokushima11 %></strong></th>
+          <% else %>
+            <th><%= @tokushima11 %></th>
+          <% end %>
+          <% if @tokushima12 > 0 %>
+            <th><strong><%= @tokushima12 %></strong></th>
+          <% else %>
+            <th><%= @tokushima12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "香川県" %>
+          <% if @kagawa1 > 0 %>
+            <th><strong><%= @kagawa1 %></strong></th>
+          <% else %>
+            <th><%= @kagawa1 %></th>
+          <% end %>
+          <% if @kagawa2 > 0 %>
+            <th><strong><%= @kagawa2 %></strong></th>
+          <% else %>
+            <th><%= @kagawa2 %></th>
+          <% end %>
+          <% if @kagawa3 > 0 %>
+            <th><strong><%= @kagawa3 %></strong></th>
+          <% else %>
+            <th><%= @kagawa3 %></th>
+          <% end %>
+          <% if @kagawa4 > 0 %>
+            <th><strong><%= @kagawa4 %></strong></th>
+          <% else %>
+            <th><%= @kagawa4 %></th>
+          <% end %>
+          <% if @kagawa5 > 0 %>
+            <th><strong><%= @kagawa5 %></strong></th>
+          <% else %>
+            <th><%= @kagawa5 %></th>
+          <% end %>
+          <% if @kagawa6 > 0 %>
+            <th><strong><%= @kagawa6 %></strong></th>
+          <% else %>
+            <th><%= @kagawa6 %></th>
+          <% end %>
+          <% if @kagawa7 > 0 %>
+            <th><strong><%= @kagawa7 %></strong></th>
+          <% else %>
+            <th><%= @kagawa7 %></th>
+          <% end %>
+          <% if @kagawa8 > 0 %>
+            <th><strong><%= @kagawa8 %></strong></th>
+          <% else %>
+            <th><%= @kagawa8 %></th>
+          <% end %>
+          <% if @kagawa9 > 0 %>
+            <th><strong><%= @kagawa9 %></strong></th>
+          <% else %>
+            <th><%= @kagawa9 %></th>
+          <% end %>
+          <% if @kagawa10 > 0 %>
+            <th><strong><%= @kagawa10 %></strong></th>
+          <% else %>
+            <th><%= @kagawa10 %></th>
+          <% end %>
+          <% if @kagawa11 > 0 %>
+            <th><strong><%= @kagawa11 %></strong></th>
+          <% else %>
+            <th><%= @kagawa11 %></th>
+          <% end %>
+          <% if @kagawa12 > 0 %>
+            <th><strong><%= @kagawa12 %></strong></th>
+          <% else %>
+            <th><%= @kagawa12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "愛媛県" %>
+          <% if @ehime1 > 0 %>
+            <th><strong><%= @ehime1 %></strong></th>
+          <% else %>
+            <th><%= @ehime1 %></th>
+          <% end %>
+          <% if @ehime2 > 0 %>
+            <th><strong><%= @ehime2 %></strong></th>
+          <% else %>
+            <th><%= @ehime2 %></th>
+          <% end %>
+          <% if @ehime3 > 0 %>
+            <th><strong><%= @ehime3 %></strong></th>
+          <% else %>
+            <th><%= @ehime3 %></th>
+          <% end %>
+          <% if @ehime4 > 0 %>
+            <th><strong><%= @ehime4 %></strong></th>
+          <% else %>
+            <th><%= @ehime4 %></th>
+          <% end %>
+          <% if @ehime5 > 0 %>
+            <th><strong><%= @ehime5 %></strong></th>
+          <% else %>
+            <th><%= @ehime5 %></th>
+          <% end %>
+          <% if @ehime6 > 0 %>
+            <th><strong><%= @ehime6 %></strong></th>
+          <% else %>
+            <th><%= @ehime6 %></th>
+          <% end %>
+          <% if @ehime7 > 0 %>
+            <th><strong><%= @ehime7 %></strong></th>
+          <% else %>
+            <th><%= @ehime7 %></th>
+          <% end %>
+          <% if @ehime8 > 0 %>
+            <th><strong><%= @ehime8 %></strong></th>
+          <% else %>
+            <th><%= @ehime8 %></th>
+          <% end %>
+          <% if @ehime9 > 0 %>
+            <th><strong><%= @ehime9 %></strong></th>
+          <% else %>
+            <th><%= @ehime9 %></th>
+          <% end %>
+          <% if @ehime10 > 0 %>
+            <th><strong><%= @ehime10 %></strong></th>
+          <% else %>
+            <th><%= @ehime10 %></th>
+          <% end %>
+          <% if @ehime11 > 0 %>
+            <th><strong><%= @ehime11 %></strong></th>
+          <% else %>
+            <th><%= @ehime11 %></th>
+          <% end %>
+          <% if @ehime12 > 0 %>
+            <th><strong><%= @ehime12 %></strong></th>
+          <% else %>
+            <th><%= @ehime12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "高知県" %>
+          <% if @kochi1 > 0 %>
+            <th><strong><%= @kochi1 %></strong></th>
+          <% else %>
+            <th><%= @kochi1 %></th>
+          <% end %>
+          <% if @kochi2 > 0 %>
+            <th><strong><%= @kochi2 %></strong></th>
+          <% else %>
+            <th><%= @kochi2 %></th>
+          <% end %>
+          <% if @kochi3 > 0 %>
+            <th><strong><%= @kochi3 %></strong></th>
+          <% else %>
+            <th><%= @kochi3 %></th>
+          <% end %>
+          <% if @kochi4 > 0 %>
+            <th><strong><%= @kochi4 %></strong></th>
+          <% else %>
+            <th><%= @kochi4 %></th>
+          <% end %>
+          <% if @kochi5 > 0 %>
+            <th><strong><%= @kochi5 %></strong></th>
+          <% else %>
+            <th><%= @kochi5 %></th>
+          <% end %>
+          <% if @kochi6 > 0 %>
+            <th><strong><%= @kochi6 %></strong></th>
+          <% else %>
+            <th><%= @kochi6 %></th>
+          <% end %>
+          <% if @kochi7 > 0 %>
+            <th><strong><%= @kochi7 %></strong></th>
+          <% else %>
+            <th><%= @kochi7 %></th>
+          <% end %>
+          <% if @kochi8 > 0 %>
+            <th><strong><%= @kochi8 %></strong></th>
+          <% else %>
+            <th><%= @kochi8 %></th>
+          <% end %>
+          <% if @kochi9 > 0 %>
+            <th><strong><%= @kochi9 %></strong></th>
+          <% else %>
+            <th><%= @kochi9 %></th>
+          <% end %>
+          <% if @kochi10 > 0 %>
+            <th><strong><%= @kochi10 %></strong></th>
+          <% else %>
+            <th><%= @kochi10 %></th>
+          <% end %>
+          <% if @kochi11 > 0 %>
+            <th><strong><%= @kochi11 %></strong></th>
+          <% else %>
+            <th><%= @kochi11 %></th>
+          <% end %>
+          <% if @kochi12 > 0 %>
+            <th><strong><%= @kochi12 %></strong></th>
+          <% else %>
+            <th><%= @kochi12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "福岡県" %>
+          <% if @fukuoka1 > 0 %>
+            <th><strong><%= @fukuoka1 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka1 %></th>
+          <% end %>
+          <% if @fukuoka2 > 0 %>
+            <th><strong><%= @fukuoka2 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka2 %></th>
+          <% end %>
+          <% if @fukuoka3 > 0 %>
+            <th><strong><%= @fukuoka3 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka3 %></th>
+          <% end %>
+          <% if @fukuoka4 > 0 %>
+            <th><strong><%= @fukuoka4 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka4 %></th>
+          <% end %>
+          <% if @fukuoka5 > 0 %>
+            <th><strong><%= @fukuoka5 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka5 %></th>
+          <% end %>
+          <% if @fukuoka6 > 0 %>
+            <th><strong><%= @fukuoka6 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka6 %></th>
+          <% end %>
+          <% if @fukuoka7 > 0 %>
+            <th><strong><%= @fukuoka7 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka7 %></th>
+          <% end %>
+          <% if @fukuoka8 > 0 %>
+            <th><strong><%= @fukuoka8 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka8 %></th>
+          <% end %>
+          <% if @fukuoka9 > 0 %>
+            <th><strong><%= @fukuoka9 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka9 %></th>
+          <% end %>
+          <% if @fukuoka10 > 0 %>
+            <th><strong><%= @fukuoka10 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka10 %></th>
+          <% end %>
+          <% if @fukuoka11 > 0 %>
+            <th><strong><%= @fukuoka11 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka11 %></th>
+          <% end %>
+          <% if @fukuoka12 > 0 %>
+            <th><strong><%= @fukuoka12 %></strong></th>
+          <% else %>
+            <th><%= @fukuoka12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "佐賀県" %>
+          <% if @saga1 > 0 %>
+            <th><strong><%= @saga1 %></strong></th>
+          <% else %>
+            <th><%= @saga1 %></th>
+          <% end %>
+          <% if @saga2 > 0 %>
+            <th><strong><%= @saga2 %></strong></th>
+          <% else %>
+            <th><%= @saga2 %></th>
+          <% end %>
+          <% if @saga3 > 0 %>
+            <th><strong><%= @saga3 %></strong></th>
+          <% else %>
+            <th><%= @saga3 %></th>
+          <% end %>
+          <% if @saga4 > 0 %>
+            <th><strong><%= @saga4 %></strong></th>
+          <% else %>
+            <th><%= @saga4 %></th>
+          <% end %>
+          <% if @saga5 > 0 %>
+            <th><strong><%= @saga5 %></strong></th>
+          <% else %>
+            <th><%= @saga5 %></th>
+          <% end %>
+          <% if @saga6 > 0 %>
+            <th><strong><%= @saga6 %></strong></th>
+          <% else %>
+            <th><%= @saga6 %></th>
+          <% end %>
+          <% if @saga7 > 0 %>
+            <th><strong><%= @saga7 %></strong></th>
+          <% else %>
+            <th><%= @saga7 %></th>
+          <% end %>
+          <% if @saga8 > 0 %>
+            <th><strong><%= @saga8 %></strong></th>
+          <% else %>
+            <th><%= @saga8 %></th>
+          <% end %>
+          <% if @saga9 > 0 %>
+            <th><strong><%= @saga9 %></strong></th>
+          <% else %>
+            <th><%= @saga9 %></th>
+          <% end %>
+          <% if @saga10 > 0 %>
+            <th><strong><%= @saga10 %></strong></th>
+          <% else %>
+            <th><%= @saga10 %></th>
+          <% end %>
+          <% if @saga11 > 0 %>
+            <th><strong><%= @saga11 %></strong></th>
+          <% else %>
+            <th><%= @saga11 %></th>
+          <% end %>
+          <% if @saga12 > 0 %>
+            <th><strong><%= @saga12 %></strong></th>
+          <% else %>
+            <th><%= @saga12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "長崎県" %>
+          <% if @nagasaki1 > 0 %>
+            <th><strong><%= @nagasaki1 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki1 %></th>
+          <% end %>
+          <% if @nagasaki2 > 0 %>
+            <th><strong><%= @nagasaki2 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki2 %></th>
+          <% end %>
+          <% if @nagasaki3 > 0 %>
+            <th><strong><%= @nagasaki3 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki3 %></th>
+          <% end %>
+          <% if @nagasaki4 > 0 %>
+            <th><strong><%= @nagasaki4 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki4 %></th>
+          <% end %>
+          <% if @nagasaki5 > 0 %>
+            <th><strong><%= @nagasaki5 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki5 %></th>
+          <% end %>
+          <% if @nagasaki6 > 0 %>
+            <th><strong><%= @nagasaki6 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki6 %></th>
+          <% end %>
+          <% if @nagasaki7 > 0 %>
+            <th><strong><%= @nagasaki7 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki7 %></th>
+          <% end %>
+          <% if @nagasaki8 > 0 %>
+            <th><strong><%= @nagasaki8 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki8 %></th>
+          <% end %>
+          <% if @nagasaki9 > 0 %>
+            <th><strong><%= @nagasaki9 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki9 %></th>
+          <% end %>
+          <% if @nagasaki10 > 0 %>
+            <th><strong><%= @nagasaki10 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki10 %></th>
+          <% end %>
+          <% if @nagasaki11 > 0 %>
+            <th><strong><%= @nagasaki11 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki11 %></th>
+          <% end %>
+          <% if @nagasaki12 > 0 %>
+            <th><strong><%= @nagasaki12 %></strong></th>
+          <% else %>
+            <th><%= @nagasaki12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "熊本県" %>
+          <% if @kumamoto1 > 0 %>
+            <th><strong><%= @kumamoto1 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto1 %></th>
+          <% end %>
+          <% if @kumamoto2 > 0 %>
+            <th><strong><%= @kumamoto2 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto2 %></th>
+          <% end %>
+          <% if @kumamoto3 > 0 %>
+            <th><strong><%= @kumamoto3 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto3 %></th>
+          <% end %>
+          <% if @kumamoto4 > 0 %>
+            <th><strong><%= @kumamoto4 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto4 %></th>
+          <% end %>
+          <% if @kumamoto5 > 0 %>
+            <th><strong><%= @kumamoto5 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto5 %></th>
+          <% end %>
+          <% if @kumamoto6 > 0 %>
+            <th><strong><%= @kumamoto6 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto6 %></th>
+          <% end %>
+          <% if @kumamoto7 > 0 %>
+            <th><strong><%= @kumamoto7 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto7 %></th>
+          <% end %>
+          <% if @kumamoto8 > 0 %>
+            <th><strong><%= @kumamoto8 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto8 %></th>
+          <% end %>
+          <% if @kumamoto9 > 0 %>
+            <th><strong><%= @kumamoto9 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto9 %></th>
+          <% end %>
+          <% if @kumamoto10 > 0 %>
+            <th><strong><%= @kumamoto10 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto10 %></th>
+          <% end %>
+          <% if @kumamoto11 > 0 %>
+            <th><strong><%= @kumamoto11 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto11 %></th>
+          <% end %>
+          <% if @kumamoto12 > 0 %>
+            <th><strong><%= @kumamoto12 %></strong></th>
+          <% else %>
+            <th><%= @kumamoto12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "大分県" %>
+          <% if @ooita1 > 0 %>
+            <th><strong><%= @ooita1 %></strong></th>
+          <% else %>
+            <th><%= @ooita1 %></th>
+          <% end %>
+          <% if @ooita2 > 0 %>
+            <th><strong><%= @ooita2 %></strong></th>
+          <% else %>
+            <th><%= @ooita2 %></th>
+          <% end %>
+          <% if @ooita3 > 0 %>
+            <th><strong><%= @ooita3 %></strong></th>
+          <% else %>
+            <th><%= @ooita3 %></th>
+          <% end %>
+          <% if @ooita4 > 0 %>
+            <th><strong><%= @ooita4 %></strong></th>
+          <% else %>
+            <th><%= @ooita4 %></th>
+          <% end %>
+          <% if @ooita5 > 0 %>
+            <th><strong><%= @ooita5 %></strong></th>
+          <% else %>
+            <th><%= @ooita5 %></th>
+          <% end %>
+          <% if @ooita6 > 0 %>
+            <th><strong><%= @ooita6 %></strong></th>
+          <% else %>
+            <th><%= @ooita6 %></th>
+          <% end %>
+          <% if @ooita7 > 0 %>
+            <th><strong><%= @ooita7 %></strong></th>
+          <% else %>
+            <th><%= @ooita7 %></th>
+          <% end %>
+          <% if @ooita8 > 0 %>
+            <th><strong><%= @ooita8 %></strong></th>
+          <% else %>
+            <th><%= @ooita8 %></th>
+          <% end %>
+          <% if @ooita9 > 0 %>
+            <th><strong><%= @ooita9 %></strong></th>
+          <% else %>
+            <th><%= @ooita9 %></th>
+          <% end %>
+          <% if @ooita10 > 0 %>
+            <th><strong><%= @ooita10 %></strong></th>
+          <% else %>
+            <th><%= @ooita10 %></th>
+          <% end %>
+          <% if @ooita11 > 0 %>
+            <th><strong><%= @ooita11 %></strong></th>
+          <% else %>
+            <th><%= @ooita11 %></th>
+          <% end %>
+          <% if @ooita12 > 0 %>
+            <th><strong><%= @ooita12 %></strong></th>
+          <% else %>
+            <th><%= @ooita12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "宮崎県" %>
+          <% if @miyazaki1 > 0 %>
+            <th><strong><%= @miyazaki1 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki1 %></th>
+          <% end %>
+          <% if @miyazaki2 > 0 %>
+            <th><strong><%= @miyazaki2 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki2 %></th>
+          <% end %>
+          <% if @miyazaki3 > 0 %>
+            <th><strong><%= @miyazaki3 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki3 %></th>
+          <% end %>
+          <% if @miyazaki4 > 0 %>
+            <th><strong><%= @miyazaki4 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki4 %></th>
+          <% end %>
+          <% if @miyazaki5 > 0 %>
+            <th><strong><%= @miyazaki5 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki5 %></th>
+          <% end %>
+          <% if @miyazaki6 > 0 %>
+            <th><strong><%= @miyazaki6 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki6 %></th>
+          <% end %>
+          <% if @miyazaki7 > 0 %>
+            <th><strong><%= @miyazaki7 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki7 %></th>
+          <% end %>
+          <% if @miyazaki8 > 0 %>
+            <th><strong><%= @miyazaki8 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki8 %></th>
+          <% end %>
+          <% if @miyazaki9 > 0 %>
+            <th><strong><%= @miyazaki9 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki9 %></th>
+          <% end %>
+          <% if @miyazaki10 > 0 %>
+            <th><strong><%= @miyazaki10 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki10 %></th>
+          <% end %>
+          <% if @miyazaki11 > 0 %>
+            <th><strong><%= @miyazaki11 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki11 %></th>
+          <% end %>
+          <% if @miyazaki12 > 0 %>
+            <th><strong><%= @miyazaki12 %></strong></th>
+          <% else %>
+            <th><%= @miyazaki12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "鹿児島県" %>
+          <% if @kagoshima1 > 0 %>
+            <th><strong><%= @kagoshima1 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima1 %></th>
+          <% end %>
+          <% if @kagoshima2 > 0 %>
+            <th><strong><%= @kagoshima2 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima2 %></th>
+          <% end %>
+          <% if @kagoshima3 > 0 %>
+            <th><strong><%= @kagoshima3 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima3 %></th>
+          <% end %>
+          <% if @kagoshima4 > 0 %>
+            <th><strong><%= @kagoshima4 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima4 %></th>
+          <% end %>
+          <% if @kagoshima5 > 0 %>
+            <th><strong><%= @kagoshima5 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima5 %></th>
+          <% end %>
+          <% if @kagoshima6 > 0 %>
+            <th><strong><%= @kagoshima6 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima6 %></th>
+          <% end %>
+          <% if @kagoshima7 > 0 %>
+            <th><strong><%= @kagoshima7 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima7 %></th>
+          <% end %>
+          <% if @kagoshima8 > 0 %>
+            <th><strong><%= @kagoshima8 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima8 %></th>
+          <% end %>
+          <% if @kagoshima9 > 0 %>
+            <th><strong><%= @kagoshima9 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima9 %></th>
+          <% end %>
+          <% if @kagoshima10 > 0 %>
+            <th><strong><%= @kagoshima10 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima10 %></th>
+          <% end %>
+          <% if @kagoshima11 > 0 %>
+            <th><strong><%= @kagoshima11 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima11 %></th>
+          <% end %>
+          <% if @kagoshima12 > 0 %>
+            <th><strong><%= @kagoshima12 %></strong></th>
+          <% else %>
+            <th><%= @kagoshima12 %></th>
+          <% end %>
+        <% end %> 
+        <% if k == "沖縄県" %>
+          <% if @okinawa1 > 0 %>
+            <th><strong><%= @okinawa1 %></strong></th>
+          <% else %>
+            <th><%= @okinawa1 %></th>
+          <% end %>
+          <% if @okinawa2 %> 0 %>
+            <th><strong><%= @okinawa2 %></strong></th>
+          <% else %>
+            <th><%= @okinawa2 %></th>
+          <% end %>
+          <% if @okinawa3 > 0 %>
+            <th><strong><%= @okinawa3 %></strong></th>
+          <% else %>
+            <th><%= @okinawa3 %></th>
+          <% end %>
+          <% if @okinawa4 > 0 %>
+            <th><strong><%= @okinawa4 %></strong></th>
+          <% else %>
+            <th><%= @okinawa4 %></th>
+          <% end %>
+          <% if @okinawa5 > 0 %>
+            <th><strong><%= @okinawa5 %></strong></th>
+          <% else %>
+            <th><%= @okinawa5 %></th>
+          <% end %>
+          <% if @okinawa6 > 0 %>
+            <th><strong><%= @okinawa6 %></strong></th>
+          <% else %>
+            <th><%= @okinawa6 %></th>
+          <% end %>
+          <% if @okinawa7 > 0 %>
+            <th><strong><%= @okinawa7 %></strong></th>
+          <% else %>
+            <th><%= @okinawa7 %></th>
+          <% end %>
+          <% if @okinawa8 > 0 %>
+            <th><strong><%= @okinawa8 %></strong></th>
+          <% else %>
+            <th><%= @okinawa8 %></th>
+          <% end %>
+          <% if @okinawa9 > 0 %>
+            <th><strong><%= @okinawa9 %></strong></th>
+          <% else %>
+            <th><%= @okinawa9 %></th>
+          <% end %>
+          <% if @okinawa10 > 0 %>
+            <th><strong><%= @okinawa10 %></strong></th>
+          <% else %>
+            <th><%= @okinawa10 %></th>
+          <% end %>
+          <% if @okinawa11 > 0 %>
+            <th><strong><%= @okinawa11 %></strong></th>
+          <% else %>
+            <th><%= @okinawa11 %></th>
+          <% end %>
+          <% if @okinawa12 > 0 %>
+            <th><strong><%= @okinawa12 %></strong></th>
+          <% else %>
+            <th><%= @okinawa12 %></th>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+    <th><strong>月別合計</strong></th>
+    <th><strong><%= @hokkaido1 + @aomori1 + @iwate1 + @miyagi1 + @akita1 + @yamagata1 + @fukushima1 + @ibaraki1 + @totigi1 + @gunnma1 + @saitama1 + @chiba1 + @tokyo1 + @kanagawa1 + @niigata1 + @toyama1 + @ishikawa1 + @fukui1 + @yamanashi1 + @nagano1 + @gifu1 + @shizuoka1 + @aichi1 + @mie1 + @shiga1 + @kyoto1 + @oosaka1 + @hyougo1 + @nara1 + @wakayama1 + @tottori1 + @shimane1 + @okayama1 + @hiroshima1 + @yamaguchi1 + @tokushima1 + @kagawa1 + @ehime1 + @kochi1 + @fukuoka1 + @saga1 + @nagasaki1 + @kumamoto1 + @ooita1 + @miyazaki1 + @kagoshima1 + @okinawa1 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido2 + @aomori2 + @iwate2 + @miyagi2 + @akita2 + @yamagata2 + @fukushima2 + @ibaraki2 + @totigi2 + @gunnma2 + @saitama2 + @chiba2 + @tokyo2 + @kanagawa2 + @niigata2 + @toyama2 + @ishikawa2 + @fukui2 + @yamanashi2 + @nagano2 + @gifu2 + @shizuoka2 + @aichi2 + @mie2 + @shiga2 + @kyoto2 + @oosaka2 + @hyougo2 + @nara2 + @wakayama2 + @tottori2 + @shimane2 + @okayama2 + @hiroshima2 + @yamaguchi2 + @tokushima2 + @kagawa2 + @ehime2 + @kochi2 + @fukuoka2 + @saga2 + @nagasaki2 + @kumamoto2 + @ooita2 + @miyazaki2 + @kagoshima2 + @okinawa2 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido3 + @aomori3 + @iwate3 + @miyagi3 + @akita3 + @yamagata3 + @fukushima3 + @ibaraki3 + @totigi3 + @gunnma3 + @saitama3 + @chiba3 + @tokyo3 + @kanagawa3 + @niigata3 + @toyama3 + @ishikawa3 + @fukui3 + @yamanashi3 + @nagano3 + @gifu3 + @shizuoka3 + @aichi3 + @mie3 + @shiga3 + @kyoto3 + @oosaka3 + @hyougo3 + @nara3 + @wakayama3 + @tottori3 + @shimane3 + @okayama3 + @hiroshima3 + @yamaguchi3 + @tokushima3 + @kagawa3 + @ehime3 + @kochi3 + @fukuoka3 + @saga3 + @nagasaki3 + @kumamoto3 + @ooita3 + @miyazaki3 + @kagoshima3 + @okinawa3 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido4 + @aomori4 + @iwate4 + @miyagi4 + @akita4 + @yamagata4 + @fukushima4 + @ibaraki4 + @totigi4 + @gunnma4 + @saitama4 + @chiba4 + @tokyo4 + @kanagawa4 + @niigata4 + @toyama4 + @ishikawa4 + @fukui4 + @yamanashi4 + @nagano4 + @gifu4 + @shizuoka4 + @aichi4 + @mie4 + @shiga4 + @kyoto4 + @oosaka4 + @hyougo4 + @nara4 + @wakayama4 + @tottori4 + @shimane4 + @okayama4 + @hiroshima4 + @yamaguchi4 + @tokushima4 + @kagawa4 + @ehime4 + @kochi4 + @fukuoka4 + @saga4 + @nagasaki4 + @kumamoto4 + @ooita4 + @miyazaki4 + @kagoshima4 + @okinawa4 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido5 + @aomori5 + @iwate5 + @miyagi5 + @akita5 + @yamagata5 + @fukushima5 + @ibaraki5 + @totigi5 + @gunnma5 + @saitama5 + @chiba5 + @tokyo5 + @kanagawa5 + @niigata5 + @toyama5 + @ishikawa5 + @fukui5 + @yamanashi5 + @nagano5 + @gifu5 + @shizuoka5 + @aichi5 + @mie5 + @shiga5 + @kyoto5 + @oosaka5 + @hyougo5 + @nara5 + @wakayama5 + @tottori5 + @shimane5 + @okayama5 + @hiroshima5 + @yamaguchi5 + @tokushima5 + @kagawa5 + @ehime5 + @kochi5 + @fukuoka5 + @saga5 + @nagasaki5 + @kumamoto5 + @ooita5 + @miyazaki5 + @kagoshima5 + @okinawa5 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido6 + @aomori6 + @iwate6 + @miyagi6 + @akita6 + @yamagata6 + @fukushima6 + @ibaraki6 + @totigi6 + @gunnma6 + @saitama6 + @chiba6 + @tokyo6 + @kanagawa6 + @niigata6 + @toyama6 + @ishikawa6 + @fukui6 + @yamanashi6 + @nagano6 + @gifu6 + @shizuoka6 + @aichi6 + @mie6 + @shiga6 + @kyoto6 + @oosaka6 + @hyougo6 + @nara6 + @wakayama6 + @tottori6 + @shimane6 + @okayama6 + @hiroshima6 + @yamaguchi6 + @tokushima6 + @kagawa6 + @ehime6 + @kochi6 + @fukuoka6 + @saga6 + @nagasaki6 + @kumamoto6 + @ooita6 + @miyazaki6 + @kagoshima6 + @okinawa6 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido7 + @aomori7 + @iwate7 + @miyagi7 + @akita7 + @yamagata7 + @fukushima7 + @ibaraki7 + @totigi7 + @gunnma7 + @saitama7 + @chiba7 + @tokyo7 + @kanagawa7 + @niigata7 + @toyama7 + @ishikawa7 + @fukui7 + @yamanashi7 + @nagano7 + @gifu7 + @shizuoka7 + @aichi7 + @mie7 + @shiga7 + @kyoto7 + @oosaka7 + @hyougo7 + @nara7 + @wakayama7 + @tottori7 + @shimane7 + @okayama7 + @hiroshima7 + @yamaguchi7 + @tokushima7 + @kagawa7 + @ehime7 + @kochi7 + @fukuoka7 + @saga7 + @nagasaki7 + @kumamoto7 + @ooita7 + @miyazaki7 + @kagoshima7 + @okinawa7 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido8 + @aomori8 + @iwate8 + @miyagi8 + @akita8 + @yamagata8 + @fukushima8 + @ibaraki8 + @totigi8 + @gunnma8 + @saitama8 + @chiba8 + @tokyo8 + @kanagawa8 + @niigata8 + @toyama8 + @ishikawa8 + @fukui8 + @yamanashi8 + @nagano8 + @gifu8 + @shizuoka8 + @aichi8 + @mie8 + @shiga8 + @kyoto8 + @oosaka8 + @hyougo8 + @nara8 + @wakayama8 + @tottori8 + @shimane8 + @okayama8 + @hiroshima8 + @yamaguchi8 + @tokushima8 + @kagawa8 + @ehime8 + @kochi8 + @fukuoka8 + @saga8 + @nagasaki8 + @kumamoto8 + @ooita8 + @miyazaki8 + @kagoshima8 + @okinawa8 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido9 + @aomori9 + @iwate9 + @miyagi9 + @akita9 + @yamagata9 + @fukushima9 + @ibaraki9 + @totigi9 + @gunnma9 + @saitama9 + @chiba9 + @tokyo9 + @kanagawa9 + @niigata9 + @toyama9 + @ishikawa9 + @fukui9 + @yamanashi9 + @nagano9 + @gifu9 + @shizuoka9 + @aichi9 + @mie9 + @shiga9 + @kyoto9 + @oosaka9 + @hyougo9 + @nara9 + @wakayama9 + @tottori9 + @shimane9 + @okayama9 + @hiroshima9 + @yamaguchi9 + @tokushima9 + @kagawa9+ @ehime9 + @kochi9 + @fukuoka9 + @saga9 + @nagasaki9 + @kumamoto9 + @ooita9 + @miyazaki9 + @kagoshima9 + @okinawa9 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido10 + @aomori10 + @iwate10 + @miyagi10 + @akita10 + @yamagata10 + @fukushima10 + @ibaraki10 + @totigi10 + @gunnma10 + @saitama10 + @chiba10 + @tokyo10 + @kanagawa10 + @niigata10 + @toyama10 + @ishikawa10 + @fukui10 + @yamanashi10 + @nagano10 + @gifu10 + @shizuoka10 + @aichi10 + @mie10 + @shiga10 + @kyoto10 + @oosaka10 + @hyougo10 + @nara10 + @wakayama10 + @tottori10 + @shimane10 + @okayama10 + @hiroshima10 + @yamaguchi10 + @tokushima10 + @kagawa10 + @ehime10 + @kochi10 + @fukuoka10 + @saga10 + @nagasaki10 + @kumamoto10 + @ooita10 + @miyazaki10 + @kagoshima10 + @okinawa10 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido11 + @aomori11 + @iwate11 + @miyagi11 + @akita11 + @yamagata11 + @fukushima11 + @ibaraki11 + @totigi11 + @gunnma11 + @saitama11 + @chiba11 + @tokyo11 + @kanagawa11 + @niigata11 + @toyama11 + @ishikawa11 + @fukui11 + @yamanashi11 + @nagano11 + @gifu11 + @shizuoka11 + @aichi11 + @mie11 + @shiga11 + @kyoto11 + @oosaka11 + @hyougo11 + @nara11 + @wakayama11 + @tottori11 + @shimane11 + @okayama11 + @hiroshima11 + @yamaguchi11 + @tokushima11 + @kagawa11 + @ehime11 + @kochi11 + @fukuoka11 + @saga11 + @nagasaki11 + @kumamoto11 + @ooita11 + @miyazaki11 + @kagoshima11 + @okinawa11 %>社</strong></th>
+    
+    <th><strong><%= @hokkaido12 + @aomori12 + @iwate12 + @miyagi12 + @akita12 + @yamagata12 + @fukushima12 + @ibaraki12 + @totigi12 + @gunnma12 + @saitama12 + @chiba12 + @tokyo12 + @kanagawa12 + @niigata12 + @toyama12 + @ishikawa12 + @fukui12 + @yamanashi12 + @nagano12 + @gifu12 + @shizuoka12 + @aichi12 + @mie12 + @shiga12 + @kyoto12 + @oosaka12 + @hyougo12 + @nara12 + @wakayama12 + @tottori12 + @shimane12 + @okayama12 + @hiroshima12 + @yamaguchi12 + @tokushima12 + @kagawa12 + @ehime12 + @kochi12 + @fukuoka12 + @saga12 + @nagasaki12 + @kumamoto12 + @ooita12 + @miyazaki12 + @kagoshima12 + @okinawa12 %>社</strong></th>
+   
+  </table>
+  
+  <p></p>
+  <div class="links">
+    <%= link_to '　　　戻る　　', :admin_root %>
+  </div>
+</div>

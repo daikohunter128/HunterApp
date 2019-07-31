@@ -1,0 +1,7 @@
+<%= markup do |m|
+  p = ClientFormPresenter.new(f, self)
+  m << p.notes
+  p.with_options(required: true) do |q|
+    m << q.drop_down_list_block(:operation_status, '待ち時間選択', Client::OPERATION_STATUS) 
+  end
+end %>

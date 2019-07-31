@@ -1,0 +1,12 @@
+<%= f.fields_for :request, f.object.request do |ff| %>
+  <%= markup do |m|
+    p = PrefectureFormPresenter.new(ff, self)
+    p.with_options(required: true) do |q|
+      m << q.drop_down_list_block(:prefecture, '都道府県', Request::PREFECTURE_NAMES)
+      m << q.text_field_block(:city, '市区町村', size: 16)
+    end
+  end %>
+<lo>
+  <strong><P>混雑時にはお隣の市区町村を調べてみては？</P></strong>
+</lo>
+<% end %>

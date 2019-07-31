@@ -1,0 +1,12 @@
+<% @title = '代行業者パスワードの編集' %>
+<h1><%= @title %></h1>
+
+<div id="generic-form">
+  <%= form_for @client, url: :admin_client_password do |f| %>
+    <%= render 'form', f: f %>
+    <div class="buttons">
+      <%= f.submit '更新' %>
+      <%= link_to 'キャンセル', :admin_clients %>
+    </div>
+  <% end %>
+</div>

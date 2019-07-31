@@ -1,0 +1,8 @@
+<%= f.fields_for :entry, f.object.entry do |ff| %>
+  <%= markup do |m|
+    p = EntryFormPresenter.new(ff, self)
+    #p.with_options(required: true) do |q|
+      m << p.body_block(:body, '　', size:43 )
+    #end
+  end %>
+<% end %>

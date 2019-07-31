@@ -1,0 +1,31 @@
+<% @title = '代行業者検索結果一覧' %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <p>希望の代行業社名をタップ。</p>
+  <table class="listing">
+    <tr>
+      <th>代行業者</th>
+      <th>待ち時間</th>
+    </tr>
+    <% @requests.each do |c| %>
+      <% p = RequestPresenter.new(c, self) %>
+      <% if p.operation_status == "本日終了" %>
+        <tr>
+          <td><strong><%= p.company_name %></strong></td>
+          <td><strong><%= p.operation_status %></strong></td>
+        </tr>
+      <% elsif p.operation_status == "本日休業" %>
+        <tr>
+          <td><strong><%= p.company_name %></strong></td>
+          <td><strong><%= p.operation_status %></strong></td>
+        </tr>
+      <% else %>
+        <tr>
+          <td><%= link_to p.company_name, :client_path %></td>
+          <td><%= link_to p.operation_status, :general_client %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table> 
+</div>

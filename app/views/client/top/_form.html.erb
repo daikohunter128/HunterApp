@@ -1,0 +1,60 @@
+<div class="notes">
+  <span class="mark">*</span> 印の付いた項目は入力必須です。
+</div>
+<div>
+  <%= f.label :certification, '認定番号', class: 'required' %>
+  <%= f.text_field :certification, required: true %>
+</div>
+<div>
+  <%= f.label :company_name, '会社名', class: 'required' %>
+  <%= f.text_field :company_name, required: true %>
+</div>
+<div>
+  <%= f.label :company_name_kana, 'フリガナ（社名）', class: 'required' %>
+  <%= f.text_field :company_name_kana, required: true %>
+</div>
+<div>
+  <%= f.label :representative, '代表者氏名', class: 'required' %>
+  <%= f.text_field :representative, required: true %>
+</div>
+<div>
+  <%= f.label :representative_kana, 'フリガナ（代表者氏名）', class: 'required' %>
+  <%= f.text_field :representative_kana, required: true %>
+</div>
+<div>
+  <%= f.label :email, 'メールアドレス', class: 'required' %>
+  <%= f.text_field :email, size: 32, required: true %>
+</div>
+<% if f.object.new_record? %>
+<div>
+  <%= f.label :password, 'パスワード', class: 'required' %>
+  <%= f.password_field :password, size: 32, required: true %>
+</div>
+<% end %>
+<div>
+  <%= f.label :postal_code, '郵便番号', class: 'required' %>
+  <%= f.text_field :postal_code1, size: 5, required: true %> -
+  <%= f.text_field :postal_code2, size: 5, required: true %>
+</div>
+<div>
+  <%= f.label :prefecture, '都道府県', class: 'required' %>
+  <%= f.text_field :prefecture, required: true %>
+</div>
+<div>
+  <%= f.label :city, '市区町村', class: 'required' %>
+  <%= f.text_field :city, required: true %>
+</div>
+<div>
+  <%= f.label :address, '住所', class: 'required' %>
+  <%= f.text_field :address1, required: true %>
+</div>
+<div>
+  <%= f.label :address, 'ビル・アパート' %>
+  <%= f.text_field :address2, required: true %>
+</div>
+<div>
+  <%= f.label :phone, 'TEL(代行呼び出し番号)', class: 'required' %>
+  <%= f.text_field :phone1, size: 4, required: true %> -
+  <%= f.text_field :phone2, size: 4, required: true %> -
+  <%= f.text_field :phone3, size: 4, required: true %>
+</div>

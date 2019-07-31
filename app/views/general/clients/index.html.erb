@@ -1,0 +1,71 @@
+<% @title = '代行業者検索結果一覧' %>
+<h1><%= @title %></h1>
+
+<% if @clients.present? %>
+  <div class="table-wrapper">
+    <p>希望の代行業社名をタップ。</p>
+    <th><font size="6" color="purple"><%= @prefecture_choice %>の代行業社一覧</font></th>
+    <table class="listing">
+      <tr>
+        <th>代行業者</th>
+        <th>待ち時間</th>
+        <th>情報の精度</th>
+      </tr>
+      <% @clients.each do |c| %>
+        <% p = RequestPresenter.new(c, self) %>
+        <% if p.operation_status == "本日終了" %>
+          <tr>
+            <td><font size="7" color="blue"><%= p.company_name %></font></td>
+            <td><font size="7" color="deeppink"><%= p.operation_status %></font></td>
+            <td><strong>ありがとうございました。</strong></td>
+          </tr>
+        <% elsif p.operation_status == "本日休業" %>
+          <tr>
+            <td><font size="7" color="blue"><%= p.company_name %></font></td>
+            <td><font size="7" color="deeppink"><%= p.operation_status %></font></td>
+            <td>ご迷惑お掛けします。</td>
+          </tr>
+        <% elsif p.operation_status == "電話にて確認" %>
+          <tr>
+            <td><font size="7"><%= link_to  p.company_name, general_client_path(c) %></font></td>
+            <td><font size="6"><%= link_to p.operation_status, general_client_path(c) %></font></td>
+            <td><font size="6" color="blue"><%= link_to "お待ちしてます。",  general_client_path(c) %>
+          </tr>
+        <% else %>
+          <tr>
+            <% info = c.updated_at %>
+            <td><font size="7"><%= link_to p.company_name, general_client_path(c) %></font></td>
+            <td><font size="7"><%= link_to p.operation_status, general_client_path(c) %></font></td>
+            <% if Time.zone.now - c.updated_at > 3600 %>
+            <td><strong>㊟</strong>１時間以上前の情報です。</td>
+            <% else %>
+              <td><span class="blinking"><font size="7" color="blue"><%= link_to "最新情報です。", general_client_path(c) %></font></span></td>
+            <% end %>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
+    
+<% else %>
+  <div class="main">
+    <%= @request.prefecture + @request.city %>
+    <strong><P>代行業者の登録はありません。</P></strong>
+  </div>
+<% end %>
+
+<div class="main">
+  <div class="links">
+    <%= link_to '戻る', :edit_general_request %>
+  </div>
+</div>
+
+<div class="main">
+  <%= render "general/shared/content" %>
+</div>
+<p></p>   
+<div class="main">
+  <div class="links">
+    <%= link_to '広告掲載の詳細', :advertisement_general_request %>
+  </div>
+</div>

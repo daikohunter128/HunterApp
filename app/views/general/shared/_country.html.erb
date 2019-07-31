@@ -1,0 +1,13 @@
+<div class="main">
+ <% if File.exist? "#{Rails.root}/app/assets/images/countory1.png" %>
+    <%= link_to(image_tag("countory1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+  <% else %>
+    <%= link_to(image_tag("sample_country.png", size: "60*60", alt: "サンプルです", align: "top"), :general_root) %><br>
+  <% end %>
+  <p></p>
+  <% if File.exist? "#{Rails.root}/app/assets/images/countory2.png" %>
+    <%= link_to(image_tag("countory2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+  <% else %>
+    <%= link_to(image_tag("sample_country.png", size: "60*60", alt: "サンプルです", align: "top"), :general_root) %><br>
+  <% end %>
+</div>

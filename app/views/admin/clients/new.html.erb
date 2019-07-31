@@ -1,0 +1,12 @@
+<% @title = '代行業者の新規登録' %>
+<h1><%= @title %></h1>
+
+<div id="generic-form">
+  <%= form_for [ :admin, @client ] do |f| %>
+    <%= render 'form', f: f %>
+    <div class="buttons">
+      <%= f.submit '登録' %>
+      <%= link_to 'キャンセル', :admin_clients %>
+    </div>
+  <% end %>
+</div>

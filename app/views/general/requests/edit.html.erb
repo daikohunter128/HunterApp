@@ -1,0 +1,22 @@
+<% title = '代行業者の検索' %>
+<h1><%= @title %></h1>
+
+<div id="generic-form">
+  <%= form_for @request_form, url: :general_request do |f| %>
+    <%= render 'form1', f: f %>
+    <div class="buttons" %>
+      <%= f.submit '検索' %>
+      <%= link_to 'キャンセル', :general_root %>
+    </div>
+  <% end %>
+</div>
+
+<div class="main">
+  <%= render "general/shared/country" %>
+</div>
+<p></p>   
+<div class="main">
+  <div class="links">
+    <%= link_to '広告掲載の詳細', :advertisement_general_request %>
+  </div>
+</div>

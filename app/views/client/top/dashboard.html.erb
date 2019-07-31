@@ -1,0 +1,47 @@
+<% @title = 'ダッシュボード' %>
+<h1><%= @title %></h1>
+
+<% if @month == "無効" %>
+  <div class="main"> 
+    <p>今月は一覧表示出来ない設定になっております。<br>一覧表示するためには利用再開手数料追加料金￥10,000を加算し<br>今月分として<strong>￥13,300</strong>を入金していただく必要があります。<br>20日までに<strong>￥3,300</strong>の入金で次月は利用出来ます。</p>
+  </div>
+<% else %>
+  <% if @next_month == "無効" %>
+    <div class="main">
+      <% if @time.day < 21 %>
+        <p>来月の利用料金の確認が取れておりません。<br>来月もご利用になるには20日までに<br><strong>￥3,300</strong>をお振り込みお願いします。</p>
+        <p><strong>利用開始手続きに数日を要する場合がございます。<br>20日以前に振込みがお済みであれば、来月はご利用になれます。</strong></p>
+      <% else %>
+        <p>現在、次月の利用料金のお振り込みの確認がとれておりません。<br>21日以降の振込みは翌々月の利用料金としてカウントします。　<br>21日以降でも利用再開手数料を含め<strong>￥13.300</strong>を　<br>お振り込み頂ければ次月のご利用を開始出来ます。</p>
+        <p><strong>利用開始手続きに数日を要する場合がございます。<br>20日以前に振込済みであれば、利用継続できます。</strong></p>
+      <% end %>
+    <p></p>
+      <p>　　　現在の待ち時間 : <strong><%= @client.operation_status %></strong>に設定されています。</p>
+      <p>　　　情報精度 : <strong><%= @info %></strong>になっています。<br><strong><%= @info1 %></strong></p>
+    </div>
+  <% else %>
+    <div class="main">
+      <p>　　　現在の待ち時間 : <strong><%= @client.operation_status %></strong>に設定されています。</p>
+      <p>　　　情報精度 : <strong><%= @info %></strong>になっています。<br><strong><%= @info1 %></strong></p>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="main">
+  <ul class="menu">
+    <p></p>
+    <p><%= link_to '待ち時間更新', :edit_client_user if current_client %></p>
+    <p></p>
+    <p><%= link_to '月々の利用料金振込み先', :bank_client_account if current_client %></p>
+    <p></p>
+    <p><%= link_to 'アカウント詳細/編集・御社の特長など', :client_account if current_client %></p>
+    <p></p>
+    <p><%= link_to '特定商取引法による表示', :commercial_client_account if current_client %></p>
+  </ul>
+</div>
+
+<div class="table-wrapper">
+  <div class="links">
+    <%= link_to 'ログアウト', :client_session, method: :delete %>
+  </div>
+</div>

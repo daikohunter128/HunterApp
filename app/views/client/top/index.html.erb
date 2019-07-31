@@ -1,0 +1,28 @@
+<% @title = '登録業者様トップページ' %>
+<h1><%= @title %></h1>
+
+<div class="main">
+  <ul class="menu">
+    <p><%= link_to '利用案内の届いていない業社はこちらから', :contact_client_user %></p>
+    <p></p>
+    <strong><P>自社の待ち時間状況をお客様にどう伝えればいいの？？　を解消！</P></strong>
+    <p><%= link_to 'ユーザーの新規登録', new_client_user_path %><br><strong>（今月と来月は利用料は「無料」です。）</strong></p>
+    <p><%= link_to 'ログイン', :client_login %></p>
+    <p><%= link_to '利用継続・利用再開について', :resume_client_user %></p>
+    <p><%= link_to '利用規約', :terms_client_user %></p>
+    <p><%= link_to 'サイトご利用のメリット　　', :merit_client_user %></p>
+    <p><%= link_to '個人情報の取り扱いについて', :personal_info_client_user %></p>
+    <p><%= link_to '特定商取引法の基づく表示　', :commercial_client_user %></p>
+    <p><%= link_to 'パスワードを忘れてしまったら・・・', :forget_client_user %></p>
+  </ul>
+</div>
+
+<div class="main">
+  <div class="links">
+    <%= link_to '　　　戻る　　　', :general_root %>
+  </div>
+</div>
+
+<div class="main">
+<strong><P>　　　登録月と翌月は無料でご利用いただけます。</P></strong>
+</div>

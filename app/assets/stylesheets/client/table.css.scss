@@ -1,0 +1,47 @@
+@import 'colors';
+@import 'dimensions';
+
+div.table-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  
+  div.links {
+    text-align: center;
+    padding: $moderate;
+    font-size: $huge;
+  }
+  
+  table {
+    margin: $moderate auto 0;
+    border: solid $moderate $very_dark_cyan;
+    tr {
+      th {
+        background-color: greenyellow;
+        colorrrr: $very_light_gray;
+      }
+      th, td { padding: 4narrow }
+      td.email, td.date, td.password { font-family: monospace; }
+      td.actions {
+        text-align: center;
+        color: $dark_gray;
+      }
+    }
+  }
+  
+  table.listing {
+    width: 100%;
+    tr:nth-child(even) { background-color: $very_light_gray }
+  }
+      
+  table.attributes {
+    width: 100%;
+    th { padding-right: $moderate; width: 200px; }
+    td { background-color: $very_light_gray; }
+    font-size: $huge;
+  }
+}
+
+div.main {
+  text-align: center;
+  font-size: $huge;
+}

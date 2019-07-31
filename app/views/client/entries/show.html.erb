@@ -1,0 +1,8 @@
+<% @title = "サービス・特典など" %>
+<h1><%= @title %></h1>
+
+<% if current_client %>
+  <p><%= link_to "編集", :edit_client_entry %></p>
+<% end %>
+
+<%= simple_format(@entry.body) %>

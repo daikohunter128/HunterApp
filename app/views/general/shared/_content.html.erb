@@ -1,0 +1,851 @@
+<div class="main">
+  <% if @request.prefecture == "北海道" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hokkaido1.png" %>
+      <%= link_to(image_tag("hokkaido1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_hokkaido.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.visit-hokkaido.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hokkaido2.png" %>
+      <%= link_to(image_tag("hokkaido2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.visit-hokkaido.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hokkaido3.png" %>
+      <%= link_to(image_tag("hokkaido3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_hokkaido.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.visit-hokkaido.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "青森県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/aomori1.png" %>
+      <%= link_to(image_tag("aomori1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_aomori.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.aptinet.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/aomori2.png" %>
+      <%= link_to(image_tag("aomori2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.aptinet.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/aomori3.png" %>
+      <%= link_to(image_tag("aomori3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_aomori.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.aptinet.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "岩手県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/iwate1.png" %>
+      <%= link_to(image_tag("iwate1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_iwate.png", size: "60*60", alt: "サンプルです", align: "top"), "https://iwatetabi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/iwate2.png" %>
+      <%= link_to(image_tag("iwate2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://iwatetabi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/iwate3.png" %>
+      <%= link_to(image_tag("iwate3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_iwate.png", size: "60*60", alt: "サンプルです", align: "top"), "https://iwatetabi.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "宮城県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/miyagi1.png" %>
+      <%= link_to(image_tag("miyagi1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_miyagi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.pref.miyagi.jp/site/kankou/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/miyagi2.png" %>
+      <%= link_to(image_tag("miyagi2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.pref.miyagi.jp/site/kankou/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/miyagi3.png" %>
+      <%= link_to(image_tag("miyagi3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_miyagi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.pref.miyagi.jp/site/kankou/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "秋田県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/akita1.png" %>
+      <%= link_to(image_tag("akita1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_akita.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.akitafan.com/pages/tourism") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/akita2.png" %>
+      <%= link_to(image_tag("akita2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.akitafan.com/pages/tourism") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/akita3.png" %>
+      <%= link_to(image_tag("akita3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %>
+    <% else %>
+      <%= link_to(image_tag("sample_akita.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.akitafan.com/pages/tourism") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "山形県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamagata1.png" %>
+      <%= link_to(image_tag("yamagata1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_yamagata.png", size: "60*60", alt: "サンプルです", align: "top"), "http://yamagatakanko.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamagata2.png" %>
+      <%= link_to(image_tag("yamagata2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "http://yamagatakanko.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamagata3.png" %>
+      <%= link_to(image_tag("yamagata3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %>
+    <% else %>
+      <%= link_to(image_tag("sample_yamagata.png", size: "60*60", alt: "サンプルです", align: "top"), "http://yamagatakanko.com/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "福島県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukushima1.png" %>
+      <%= link_to(image_tag("fukushima1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_fukushima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tif.ne.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukushima2.png" %>
+      <%= link_to(image_tag("fukushima2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tif.ne.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukushima3.png" %>
+      <%= link_to(image_tag("fukushima3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %>
+    <% else %>
+      <%= link_to(image_tag("sample_fukushima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tif.ne.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "茨城県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ibaraki1.png" %>
+      <%= link_to(image_tag("ibaraki1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ibaraki.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.ibarakiguide.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ibaraki2.png" %>
+      <%= link_to(image_tag("ibaraki2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.ibarakiguide.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ibaraki3.png" %>
+      <%= link_to(image_tag("ibaraki3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ibaraki.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.ibarakiguide.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "栃木県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tochigi1.png" %>
+      <%= link_to(image_tag("tochigi1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tochigi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tochigiji.or.jp/?spn_move") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tochigi2.png" %>
+      <%= link_to(image_tag("tochigi2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tochigiji.or.jp/?spn_move") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tochigi3.png" %>
+      <%= link_to(image_tag("tochigi3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tochigi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tochigiji.or.jp/?spn_move") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "群馬県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/gunma1.png" %>
+      <%= link_to(image_tag("gunma1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_gunma.png", size: "60*60", alt: "サンプルです", align: "top"), "https://gunma-dc.net/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/gunma2.png" %>
+      <%= link_to(image_tag("gunma2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://gunma-dc.net/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/gunma3.png" %>
+      <%= link_to(image_tag("gunma3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_gunma.png", size: "60*60", alt: "サンプルです", align: "top"), "https://gunma-dc.net/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "埼玉県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/saitama1.png" %>
+      <%= link_to(image_tag("saitama1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_saitama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://saitama-omotenashi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/saitama2.png" %>
+      <%= link_to(image_tag("saitama2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://saitama-omotenashi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/saitama3.png" %>
+      <%= link_to(image_tag("saitama3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_saitama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://saitama-omotenashi.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "千葉県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/chiba1.png" %>
+      <%= link_to(image_tag("chiba1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_chiba.png", size: "60*60", alt: "サンプルです", align: "top"), "http://maruchiba.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/chiba2.png" %>
+      <%= link_to(image_tag("chiba2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "http://maruchiba.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/chiba3.png" %>
+      <%= link_to(image_tag("chiba3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_chiba.png", size: "60*60", alt: "サンプルです", align: "top"), "http://maruchiba.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "東京都" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tokyo1.png" %>
+      <%= link_to(image_tag("tokyo1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tokyo.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.gotokyo.org/jp/index.html") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tokyo2.png" %>
+      <%= link_to(image_tag("tokyo2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.gotokyo.org/jp/index.html") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tokyo3.png" %>
+      <%= link_to(image_tag("tokyo3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tokyo.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.gotokyo.org/jp/index.html") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "神奈川県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kanagawa1.png" %>
+      <%= link_to(image_tag("kanagawa1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kanagawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://trip.pref.kanagawa.jp/ja") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kanagawa2.png" %>
+      <%= link_to(image_tag("kanagawa2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://trip.pref.kanagawa.jp/ja") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kanagawa3.png" %>
+      <%= link_to(image_tag("kanagawa3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kanagawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://trip.pref.kanagawa.jp/ja") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "新潟県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/niigata1.png" %>
+      <%= link_to(image_tag("niigata1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_niigata.png", size: "60*60", alt: "サンプルです", align: "top"), "https://niigata-kankou.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/niigata2.png" %>
+      <%= link_to(image_tag("niigata2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://niigata-kankou.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/niigata3.png" %>
+      <%= link_to(image_tag("niigata3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_niigata.png", size: "60*60", alt: "サンプルです", align: "top"), "https://niigata-kankou.or.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "富山県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/toyama1.png" %>
+      <%= link_to(image_tag("toyama1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_toyama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.info-toyama.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/toyama2.png" %>
+      <%= link_to(image_tag("toyama2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.info-toyama.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/toyama3.png" %>
+      <%= link_to(image_tag("toyama3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_toyama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.info-toyama.com/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "石川県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ishikawa1.png" %>
+      <%= link_to(image_tag("ishikawa1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ishikawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kanazawa-kankoukyoukai.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ishikawa2.png" %>
+      <%= link_to(image_tag("ishikawa2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kanazawa-kankoukyoukai.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ishikawa3.png" %>
+      <%= link_to(image_tag("ishikawa3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ishikawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kanazawa-kankoukyoukai.or.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "福井県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukui1.png" %>
+      <%= link_to(image_tag("fukui1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_fukui.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.fuku-e.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukui2.png" %>
+      <%= link_to(image_tag("fukui2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.fuku-e.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukui3.png" %>
+      <%= link_to(image_tag("fukui3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_fukui.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.fuku-e.com/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "山梨県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamanashi1.png" %>
+      <%= link_to(image_tag("yamanashi1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_yamanashi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.yamanashi-kankou.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamanashi2.png" %>
+      <%= link_to(image_tag("yamanashi2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.yamanashi-kankou.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamanashi3.png" %>
+      <%= link_to(image_tag("yamanashi3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_yamanashi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.yamanashi-kankou.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "長野県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nagano1.png" %>
+      <%= link_to(image_tag("nagano1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_nagano.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.nagano-tabi.net/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nagano2.png" %>
+      <%= link_to(image_tag("nagano2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.nagano-tabi.net/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nagano3.png" %>
+      <%= link_to(image_tag("nagano3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_nagano.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.nagano-tabi.net/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "岐阜県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/gifu1.png" %>
+      <%= link_to(image_tag("gifu1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_gifu.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankou-gifu.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/gifu2.png" %>
+      <%= link_to(image_tag("gifu2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankou-gifu.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/gifu3.png" %>
+      <%= link_to(image_tag("gifu3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_gifu.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankou-gifu.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "静岡県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shizuoka1.png" %>
+      <%= link_to(image_tag("shizuoka1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_shizuoka.png", size: "60*60", alt: "サンプルです", align: "top"), "https://hellonavi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shizuoka2.png" %>
+      <%= link_to(image_tag("shizuoka2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://hellonavi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shizuoka3.png" %>
+      <%= link_to(image_tag("shizuoka3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_shizuoka.png", size: "60*60", alt: "サンプルです", align: "top"), "https://hellonavi.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "愛知県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/aichi1.png" %>
+      <%= link_to(image_tag("aichi1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_aichi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.aichi-now.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/aichi2.png" %>
+      <%= link_to(image_tag("aichi2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.aichi-now.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/aichi3.png" %>
+      <%= link_to(image_tag("aichi3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %>
+    <% else %>
+      <%= link_to(image_tag("sample_aichi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.aichi-now.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "三重県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/mie1.png" %>
+      <%= link_to(image_tag("mie1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_mie.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankomie.or.jp/index.html") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/mie2.png" %>
+      <%= link_to(image_tag("mie2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankomie.or.jp/index.html") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/mie3.png" %>
+      <%= link_to(image_tag("mie3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_mie.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankomie.or.jp/index.html") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "滋賀県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shiga1.png" %>
+      <%= link_to(image_tag("shiga1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_shiga.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.biwako-visitors.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shiga2.png" %>
+      <%= link_to(image_tag("shiga2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.biwako-visitors.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shiga3.png" %>
+      <%= link_to(image_tag("shiga3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_shiga.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.biwako-visitors.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "京都府" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kyoto1.png" %>
+      <%= link_to(image_tag("kyoto1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kyotofu.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kyoto-kankou.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kyoto2.png" %>
+      <%= link_to(image_tag("kyoto2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kyoto-kankou.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kyoto3.png" %>
+      <%= link_to(image_tag("kyoto3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kyotofu.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kyoto-kankou.or.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "大阪府" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/oosaka1.png" %>
+      <%= link_to(image_tag("oosaka1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_oosakafu.png", size: "60*60", alt: "サンプルです", align: "top"), "https://osaka-info.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/oosaka2.png" %>
+      <%= link_to(image_tag("oosaka2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://osaka-info.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/oosaka3.png" %>
+      <%= link_to(image_tag("oosaka3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_oosakafu.png", size: "60*60", alt: "サンプルです", align: "top"), "https://osaka-info.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "兵庫県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hyogo1.png" %>
+      <%= link_to(image_tag("hyogo1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_hyougo.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.hyogo-tourism.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hyogo2.png" %>
+      <%= link_to(image_tag("hyogo2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.hyogo-tourism.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hyogo3.png" %>
+      <%= link_to(image_tag("hyogo3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_hyougo.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.hyogo-tourism.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "奈良県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nara1.png" %>
+      <%= link_to(image_tag("nara1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_nara.png", size: "60*60", alt: "サンプルです", align: "top"), "http://yamatoji.nara-kankou.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nara2.png" %>
+      <%= link_to(image_tag("nara2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "http://yamatoji.nara-kankou.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nara3.png" %>
+      <%= link_to(image_tag("nara3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_nara.png", size: "60*60", alt: "サンプルです", align: "top"), "http://yamatoji.nara-kankou.or.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "和歌山県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/wakayama1.png" %>
+      <%= link_to(image_tag("wakayama1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_wakayama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.wakayama-kanko.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/wakayama2.png" %>
+      <%= link_to(image_tag("wakaama2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.wakayama-kanko.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/wakayama3.png" %>
+      <%= link_to(image_tag("wakayama3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_wakayama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.wakayama-kanko.or.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "鳥取県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tottori1.png" %>
+      <%= link_to(image_tag("tottori1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tottori.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tottori-guide.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tottori2.png" %>
+      <%= link_to(image_tag("tottori2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tottori-guide.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tottori3.png" %>
+      <%= link_to(image_tag("tottori3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tottori.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.tottori-guide.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "島根県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shimane1.png" %>
+      <%= link_to(image_tag("shimane1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_shimane.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankou-shimane.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shimane2.png" %>
+      <%= link_to(image_tag("shimane2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankou-shimane.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/shimane3.png" %>
+      <%= link_to(image_tag("shimane3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_shimanei.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kankou-shimane.com/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "岡山県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/okayama1.png" %>
+      <%= link_to(image_tag("okayama1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_okayama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.okayama-kanko.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/okayama2.png" %>
+      <%= link_to(image_tag("okayama2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.okayama-kanko.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/okayama3.png" %>
+      <%= link_to(image_tag("okayama3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_okayama.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.okayama-kanko.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "広島県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hiroshima1.png" %>
+      <%= link_to(image_tag("hiroshima1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_hiroshima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.hiroshima-kankou.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hiroshima2.png" %>
+      <%= link_to(image_tag("hiroshima2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.hiroshima-kankou.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/hiroshima3.png" %>
+      <%= link_to(image_tag("hiroshima3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_hiroshima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.hiroshima-kankou.com/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "山口県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamaguchi1.png" %>
+      <%= link_to(image_tag("yamaguchi1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_yamaguchi.png", size: "60*60", alt: "サンプルです", align: "top"), "http://www.oidemase.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamaguchi2.png" %>
+      <%= link_to(image_tag("yamaguchi2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "http://www.oidemase.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/yamaguchi3.png" %>
+      <%= link_to(image_tag("yamaguchi3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_yamaguchi.png", size: "60*60", alt: "サンプルです", align: "top"), "http://www.oidemase.or.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "徳島県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tokushima1.png" %>
+      <%= link_to(image_tag("tokushima1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tokushima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.awanavi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tokushima2.png" %>
+      <%= link_to(image_tag("tokushima2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.awanavi.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/tokushima3.png" %>
+      <%= link_to(image_tag("tokushima3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_tokushima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.awanavi.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "香川県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kagawa1.png" %>
+      <%= link_to(image_tag("kagawa1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kagawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.my-kagawa.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kagawa2.png" %>
+      <%= link_to(image_tag("kagawa2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.my-kagawa.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kagawa3.png" %>
+      <%= link_to(image_tag("kagawa3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kagawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.my-kagawa.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "愛媛県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ehime1.png" %>
+      <%= link_to(image_tag("ehime1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ehime.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.iyokannet.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ehime2.png" %>
+      <%= link_to(image_tag("ehime2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.iyokannet.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ehime3.png" %>
+      <%= link_to(image_tag("ehime3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ehime.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.iyokannet.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "高知県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kochi1.png" %>
+      <%= link_to(image_tag("kochi1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kouchi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.attaka.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kochi2.png" %>
+      <%= link_to(image_tag("kochi2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.attaka.or.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kochi3.png" %>
+      <%= link_to(image_tag("kochi3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kouchi.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.attaka.or.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "福岡県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukuoka1.png" %>
+      <%= link_to(image_tag("fukuoka1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_fukuoka.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.crossroadfukuoka.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukuoka2.png" %>
+      <%= link_to(image_tag("fukuoka2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.crossroadfukuoka.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/fukuoka3.png" %>
+      <%= link_to(image_tag("fukuoka3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_fukuoka.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.crossroadfukuoka.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "佐賀県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/saga1.png" %>
+      <%= link_to(image_tag("saga1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_saga.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.sagabai.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/saga2.png" %>
+      <%= link_to(image_tag("saga2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.sagabai.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/saga3.png" %>
+      <%= link_to(image_tag("saga3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_saga.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.sagabai.com/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "長崎県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nagasaki1.png" %>
+      <%= link_to(image_tag("nagasaki1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_nagasaki.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.nagasaki-tabinet.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nagasaki2.png" %>
+      <%= link_to(image_tag("nagasaki2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.nagasaki-tabinet.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/nagasaki3.png" %>
+      <%= link_to(image_tag("nagasaki3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_nagasaki.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.nagasaki-tabinet.com/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "熊本県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kumamoto1.png" %>
+      <%= link_to(image_tag("kumamoto1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kumamoto.png", size: "60*60", alt: "サンプルです", align: "top"), "https://kumamoto.guide/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kumamoto2.png" %>
+      <%= link_to(image_tag("kumamoto2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://kumamoto.guide/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kumamoto3.png" %>
+      <%= link_to(image_tag("kumamoto3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kumamoto.png", size: "60*60", alt: "サンプルです", align: "top"), "https://kumamoto.guide/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "大分県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ooita1.png" %>
+      <%= link_to(image_tag("ooita1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ooita.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.visit-oita.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ooita2.png" %>
+      <%= link_to(image_tag("ooita2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.visit-oita.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/ooita3.png" %>
+      <%= link_to(image_tag("ooita3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_ooita.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.visit-oita.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "宮崎県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/miyazaki1.png" %>
+      <%= link_to(image_tag("miyazaki1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_miyazaki.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kanko-miyazaki.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/miyazaki2.png" %>
+      <%= link_to(image_tag("miyazaki2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kanko-miyazaki.jp/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/miyazaki3.png" %>
+      <%= link_to(image_tag("miyazaki3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_miyazaki.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kanko-miyazaki.jp/") %><br>
+    <% end %>
+  <% elsif @request.prefecture == "鹿児島県" %>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kagoshima1.png" %>
+      <%= link_to(image_tag("kagoshima1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kagoshima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kagoshima-kankou.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kagoshima2.png" %>
+      <%= link_to(image_tag("kagoshima2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kagoshima-kankou.com/") %><br>
+    <% end %>
+    <p></p>
+    <% if File.exist? "#{Rails.root}/app/assets/images/kagoshima3.png" %>
+      <%= link_to(image_tag("kagoshima3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+    <% else %>
+      <%= link_to(image_tag("sample_kagoshima.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.kagoshima-kankou.com/") %><br>
+    <% end %>
+  <% else %>
+    <% if @request.prefecture == "沖縄県" %>
+      <% if File.exist? "#{Rails.root}/app/assets/images/okinawa1.png" %>
+        <%= link_to(image_tag("okinawa1.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+      <% else %>
+        <%= link_to(image_tag("sample_okinawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.okinawastory.jp/") %><br>
+      <% end %>
+      <p></p>
+      <% if File.exist? "#{Rails.root}/app/assets/images/okinawa2.png" %>
+        <%= link_to(image_tag("okinawa2.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+      <% else %>
+        <%= link_to(image_tag("sample.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.okinawastory.jp/") %><br>
+      <% end %>
+      <p></p>
+      <% if File.exist? "#{Rails.root}/app/assets/images/okinawa3.png" %>
+        <%= link_to(image_tag("okinawa3.png", size: "60*60", alt: "広告です", align: "top"), :general_root) %><br>
+      <% else %>
+        <%= link_to(image_tag("sample_okinawa.png", size: "60*60", alt: "サンプルです", align: "top"), "https://www.okinawastory.jp/") %><br>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

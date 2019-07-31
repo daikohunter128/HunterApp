@@ -1,0 +1,24 @@
+<% @title = '利用料金振込み先' %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <h2>月額利用料金の振込み先<br>御社のユーザーコードは<strong><%= @client.prefecture_cord %></strong>です。</h2>
+  <ol>
+    <p>銀行名　：　みずほ銀行秋田支店</p>
+    <p>種目　　：　普通</p>
+    <p>口座番号：　２１７１１８９</p>
+    <p>口座名義：　WONDER GATE</p>
+    <p>店番号　：　７２０</p>
+    <p>振込み人名義：　<%= @client.prefecture_cord %> <%= @client.company_name %><br><strong>　先頭にユーザーコードを忘れずに!</strong><br><strong>　判別が出来ず継続設定ができません。</strong></p>
+  </ol>
+  <strong><h2>１年分の一括料金振込み優遇制度</h2></strong>
+  <ol>
+    <p>１年分の利用料金は通常￥39,600と<br>なりますが、１年分の一括払いで<br>￥36,000を一括でお振り込みだと<br>￥3,300(1ヶ月分）お得に１年間ご利用頂けます。</p>
+  </ol>
+</div>
+
+<div class="table-wrapper">
+  <div class="links">
+    <%= link_to '戻る', :client_root %>
+  </div>
+</div>

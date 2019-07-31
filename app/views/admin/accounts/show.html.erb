@@ -1,0 +1,25 @@
+<% @title = 'アカウント情報' %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <% if @administrator.id == 1 %>
+    <div class="links">
+      <%= link_to 'アカウント情報編集', :edit_admin_account %>
+    </div>
+  <% end %>
+  
+  <table class="attributes">
+    <tr>
+      <th>1st password</th>
+      <td class="email">
+        <%= @administrator.email %>
+      </td>
+    </tr>
+  </table>
+  <p></p>
+  <div class="main">
+    <div class="links">
+      <%= link_to '　　　戻る　　', :admin_root %>
+    </div>
+  </div>
+</div>

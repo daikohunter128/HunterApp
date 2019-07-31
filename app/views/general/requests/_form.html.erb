@@ -1,0 +1,5 @@
+<%= FormPresenter.new(f, self).notes %>
+<fieldset id="prefecture-fields">
+  <legend>都道府県・市区町村の検索</legend>
+  <%= render 'prefecture_fields', f: f, confirming: false %>
+</fieldset>

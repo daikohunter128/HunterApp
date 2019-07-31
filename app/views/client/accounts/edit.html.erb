@@ -1,0 +1,12 @@
+<% @title = 'アカウント情報編集' %>
+<h1><%= @title %></h1>
+
+<div id="generic-form">
+  <%= form_for @client, url: :client_account do |f| %>
+    <%= render 'form1', f: f %>
+    <div class="buttons">
+      <%= f.submit '更新' %>
+      <%= link_to 'キャンセル', :client_account %>
+    </div>
+  <% end %>
+</div>

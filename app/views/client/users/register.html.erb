@@ -1,0 +1,14 @@
+<% @title = '登録済み' %>
+<h1><%= @title %></h1>
+
+<table class="merit">
+  <h2>御社はすでに登録済みとなっております。</h2>
+  <p>ご入力いただいた会社情報はすでに登録されています。<br>初期設定の仮登録のままだと思われます。<br>ご利用案内が届いていない場合は弊社宛まで案内の請求をお願いします。<br>もしくは、もう一度正確に入力してみてください。</p>
+  <p><%= link_to '利用案内の届いていない業社はこちらから', :contact_client_user %></p>
+</table>
+
+<div class="table-wrapper">
+  <div class="links">
+    <%= link_to '戻る', :client_root %>
+  </div>
+</div>

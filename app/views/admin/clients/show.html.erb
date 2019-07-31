@@ -1,0 +1,34 @@
+<% @title = "代行業者詳細情報" %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <table class="attributes">
+   <tr><th colspan="2">代行業者詳細情報</th></tr>
+    <% p1 = ClientPresenter.new(@client, self) %>
+    <tr><th>認定番号</th><td><%= p1.certification %></td></tr>
+    <tr><th>社名</th><td><%= p1.company_name %></td></tr>
+    <tr><th>フリガナ（社名）</th><td><%= p1.company_name_kana %></td></tr>
+    <tr><th>代表者名</th><td><%= p1.representative %></td></tr>
+    <tr><th>フリガナ（代表者名）</th><td><%= p1.representative_kana %></td></tr>
+    <tr><th>住所</th><td><%= p1.prefecture %><%= p1.city %><%= p1.address1 %><%= p1.address2 %></td></tr>
+    <tr><th>電話番号</th><td><%= p1.phone1 %>-<%= p1.phone2 %>-<%= p1.phone3 %></td></tr>
+    <tr><th>１月契約</th><td><%= p1.agreement1 %></td></tr>
+    <tr><th>2月契約</th><td><%= p1.agreement2 %></td></tr>
+    <tr><th>3月契約</th><td><%= p1.agreement3 %></td></tr>
+    <tr><th>4月契約</th><td><%= p1.agreement4 %></td></tr>
+    <tr><th>5月契約</th><td><%= p1.agreement5 %></td></tr>
+    <tr><th>6月契約</th><td><%= p1.agreement6 %></td></tr>
+    <tr><th>7月契約</th><td><%= p1.agreement7 %></td></tr>
+    <tr><th>8月契約</th><td><%= p1.agreement8 %></td></tr>
+    <tr><th>9月契約</th><td><%= p1.agreement9 %></td></tr>
+    <tr><th>１0月契約</th><td><%= p1.agreement10 %></td></tr>
+    <tr><th>１1月契約</th><td><%= p1.agreement11 %></td></tr>
+    <tr><th>１2月契約</th><td><%= p1.agreement12 %></td></tr>
+  </table>
+</div>
+
+<div class="main">
+  <div class="links">
+    <%= link_to '戻る', :admin_clients %>
+  </div>
+</div>

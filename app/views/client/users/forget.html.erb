@@ -1,0 +1,31 @@
+<% @title = 'パスワードを忘れてしまったら' %>
+<h1><%= @title %></h1>
+
+<table class="merit">
+  <h2>以下の内容でメール送信ください。</h2>
+  <ol>
+    <p><li>タイトル　：　パスワード再設定依頼</li></p>
+    <p><li>認定番号</li></p>
+    <p><li>会社名</li></p>
+    <p><li>会社名（カナ）</li></p>
+    <p><li>代表者氏名</li></p>
+    <p><li>代表者氏名（カナ）</li></p>
+    <p><li>郵便番号</li></p>
+    <p><li>住所</li></p>
+    <p><li>電話番号</li></p>
+    <p><li>登録メールアドレス</li></p>
+    <p><li>新しいパスワード</li></p>
+  </ol>
+</table>
+
+<h2>上記の送信先</h2>
+<ol>
+  <p><li>wonder.gate128@gmail.com</li></p>
+  <p><li>ワンダーゲート　カスタマーサポート宛て</li></p>
+</ol>
+
+<div class="table-wrapper">
+  <div class="links">
+    <%= link_to '戻る', :client_root %>
+  </div>
+</div>

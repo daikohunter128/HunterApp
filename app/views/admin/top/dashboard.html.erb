@@ -1,0 +1,10 @@
+<% @title = 'ダッシュボード' %>
+<h1><%= @title %></h1>
+
+<ul class="menu">
+  <li><%= link_to '顧客管理', admin_clients_path %></li>
+  <li><%= link_to '代行業者のログイン・ログアウト記録', admin_client_events_path %></li>
+  <li><%= link_to '管理者パスワードの編集', edit_admin_password_path %></li>
+  <li><%= link_to '総利用業社数（１２ヶ月間）', use_month_admin_account_path %></li>
+  <li><%= link_to '継続利用業社数（１２ヶ月間）', renewal_admin_account_path %></li>
+</ul>

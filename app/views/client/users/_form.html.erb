@@ -1,0 +1,19 @@
+<%= markup do |m|
+  p = ClientFormPresenter.new(f, self)
+  m << p.notes
+  p.with_options(required: true) do |q|
+    m << q.text_field_block(:certification, '認定番号')
+    m << q.company_name_block(:company_name, '会社名')
+    m << q.company_name_block(:company_name_kana, 'フリガナ（会社名）')
+    m << q.name_block(:representative, '代表者氏名')
+    m << q.name_block(:representative_kana, 'フリガナ(代表者氏名)')
+    m << q.text_field_block(:email, 'メールアドレス', size: 32) 
+    m << p.password_field_block(:password, 'パスワード（メモを残す）', size: 32)
+    m << q.postal_code_block(:postal_code1, :postal_code2, :'郵便番号', size: 5)
+    m << q.drop_down_list_block(:prefecture, '都道府県', Request::PREFECTURE_NAMES) 
+    m << q.text_field_block(:city, '市区町村')
+    m << q.text_field_block(:address1, '住所')
+    m << q.text_field_block(:address2, 'ビル・アパート', required: false)
+    m << q.phone_block(:phone1, :phone2, :phone3, 'T E L　※お客様が代行依頼時に利用するTELになります。', size: 5)
+  end
+end %>

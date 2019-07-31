@@ -1,0 +1,62 @@
+<% @title = '登録業者管理' %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <div class="links">
+    <%= link_to '新規登録', :new_admin_client %>
+  </div>
+  
+  
+  
+  <%= paginate @clients %>
+  
+  <table class="listing">
+    <tr>
+      <th>id</th>
+      <th>業社コード</th>
+      <th>認定番号</th>
+      <th>都道府県</th>
+      <th>市区町村</th>
+      <th>営業地域</th>
+      <th>社名</th>
+      <th>代表者名</th>
+      <th>電話番号</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>停止フラグ</th>
+      <th>アクション</th>
+    </tr>
+    <% @clients.each do |m| %>
+      <% p = ClientPresenter.new(m, self) %>
+      <tr>
+        <td class="id"><%= m.id %></td>
+        <td><%= m.prefecture_cord %></td>
+        <td><%= m.certification %></td>
+        <td class="prefecture"><%= m.prefecture %></td>
+        <td class="city"><%= m.city %></td>
+        <td><%= m.sales %></td>
+        <td><%= m.company_name %></td>
+        <td><%= m.representative %></td>
+        <td><%= m.phone1 %>-<%= m.phone2 %>-<%= m.phone3 %></td>
+        <td class="date"><%= m.start_date.strftime('%Y/%m/%d') %></td>
+        <td class="date"><%= m.end_date.try(:strftime, '%Y/%m/%d') %></td>
+        <td class="boolean"><%= p.suspended_mark %></td>
+        <td class="actions">
+          <%= link_to '詳細', [ :admin, m ] %> |
+          <%= link_to '編集', [ :edit, :admin, m ] %> |
+          <%= link_to 'P/W', edit_admin_client_password_path(m) %> |
+          <%= link_to 'Events', [ :admin, m, :client_events ] %> |
+          <%= link_to '削除', [ :admin, m], method: :delete,
+            data: { confirm: '本当に削除しますか？' } %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  
+  <%= paginate @clients %> 
+  
+  <div class="links">
+    <%= link_to '新規登録', :new_admin_client %>
+    <%= link_to '　　　戻る　　', :admin_root %>
+  </div>
+</div>

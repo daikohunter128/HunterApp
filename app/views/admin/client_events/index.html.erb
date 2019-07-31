@@ -1,0 +1,40 @@
+<%
+  if @client
+    company_name = @client.company_name
+    @title = "#{company_name}のログイン・ログアウト記録"
+  else
+    @title = '代行業者のログイン・ログアウト記録'
+  end
+%>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <div class="links">
+    <%= link_to '代行業者一覧', :admin_clients %>
+  </div>
+  
+  <%= paginate @events %>
+  
+  <table class="listing">
+    <tr>
+      <% unless @client %><th>代行業者名</th><% end %>
+      <th>種別</th>
+      <th>日時</th>
+    </tr>
+    <% @events.each do |event| %>
+      <%= ClientEventPresenter.new(event, self).table_raw %>
+    <% end %>
+    <% if @events.empty? %>
+      <tr>
+        <%= content_tag(:td, '記録がありません',
+          colspan: @client ? 2 : 3, style: 'text-align: center') %>
+      </tr>
+    <% end %>
+  </table>
+  
+  <%= paginate @events %>
+  
+  <div class=" links">
+    <%= link_to '代行業者一覧', :admin_clients %>
+  </div>
+</div>

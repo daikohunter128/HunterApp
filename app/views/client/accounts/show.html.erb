@@ -1,0 +1,95 @@
+<% @title = 'アカウント情報' %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+  <div class="links">
+    <%= link_to 'アカウント情報変更', :edit_client_account %> |
+    <%= link_to 'パスワード変更', :edit_client_password %>
+  </div>
+  
+  <table class="attributes">
+    <tr>
+      <th>認定番号</th>
+      <td>
+        <%= @client.certification %>
+      </td>
+    </tr>
+    <tr>
+      <th>ユーザーコード</th>
+      <td>
+        <%= @client.prefecture_cord %>　(<strong>御社の認識番号です。</strong>)
+      </td>
+    </tr>
+    <tr>
+      <th>社名（フリガナ）</th>
+      <td>
+        <%= @client.company_name %>　(
+        <%= @client.company_name_kana %> )
+      </td>
+    </tr>
+    <tr>
+      <th>営業エリア</th>
+      <td>
+        <%= @client.sales %>
+      </td>
+    </tr>
+    <tr>
+      <th>代表者名（フリガナ）</th>
+      <td>
+        <%= @client.representative %>　(
+        <%= @client.representative_kana %> )
+      </td>
+    </tr>
+    <tr>
+      <th>郵便番号</th>
+      <td>
+        <%= @client.postal_code1 %> - 
+        <%= @client.postal_code2 %>
+      </td>
+    </tr>
+    <tr>
+      <th>住所</th>
+      <td>
+        <%= @client.prefecture %>
+        <%= @client.city %>
+        <%= @client.address1 %>
+        <%= @client.address2 %>
+      </td>
+    </tr>
+    <tr>
+      <th>TEL</th>
+      <td>
+        <%= @client.phone1 %> -
+        <%= @client.phone2 %> -
+        <%= @client.phone3 %>
+      </td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td class="email">
+        <%= @client.email %>
+      </td>
+    </tr>
+    <tr>
+      <th>パスワード</th>
+      <td class="password">※※※※※※※※※※</td>
+    </tr>
+    <tr>
+      <th>開始日</th>
+      <td class="date">
+        <%= @client.start_date.strftime('%Y/%m/%d') %>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>　</p>
+<div class="main">
+  <div class="links">
+    <p>御社のサービス・特長など　<%= image_tag("yajirusi.PNG", size: "60*60", alt: "⇓", align: "top") %>　をタップし記入してくだ。</p>
+    <%= link_to '御社の特長などコメントの編集ページへ', edit_client_entry_path(@entry) %>
+  </div>
+  <p></p>
+  <div class="links">
+    <%= link_to '　　　戻る　　', :client_root %>
+  </div>
+</div>
