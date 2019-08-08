@@ -20,7 +20,18 @@ class CreateClients < ActiveRecord::Migration[5.1]
       t.string :email_for_index, null: false
       t.string :hashed_password
       t.integer :prefecture_cord
-      t.integer :contract_renewal, null: false, default: 1
+      t.integer :contract_renewal1, null: false, default: 1
+      t.integer :contract_renewal2, null: false, default: 1
+      t.integer :contract_renewal3, null: false, default: 1
+      t.integer :contract_renewal4, null: false, default: 1
+      t.integer :contract_renewal5, null: false, default: 1
+      t.integer :contract_renewal6, null: false, default: 1
+      t.integer :contract_renewal7, null: false, default: 1
+      t.integer :contract_renewal8, null: false, default: 1
+      t.integer :contract_renewal9, null: false, default: 1
+      t.integer :contract_renewal10, null: false, default: 1
+      t.integer :contract_renewal11, null: false, default: 1
+      t.integer :contract_renewal12, null: false, default: 1
       t.string :operation_status, null: false, default: "電話にて確認"
       t.integer :status_no, null: false, default: 9
       t.integer :update_no, null: false, default: 2

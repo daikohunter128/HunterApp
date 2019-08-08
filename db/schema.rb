@@ -53,7 +53,18 @@ ActiveRecord::Schema.define(version: 20190711144010) do
     t.string "email_for_index", null: false
     t.string "hashed_password"
     t.integer "prefecture_cord"
-    t.integer "contract_renewal", default: 1, null: false
+    t.integer "contract_renewal1", default: 1, null: false
+    t.integer "contract_renewal2", default: 1, null: false
+    t.integer "contract_renewal3", default: 1, null: false
+    t.integer "contract_renewal4", default: 1, null: false
+    t.integer "contract_renewal5", default: 1, null: false
+    t.integer "contract_renewal6", default: 1, null: false
+    t.integer "contract_renewal7", default: 1, null: false
+    t.integer "contract_renewal8", default: 1, null: false
+    t.integer "contract_renewal9", default: 1, null: false
+    t.integer "contract_renewal10", default: 1, null: false
+    t.integer "contract_renewal11", default: 1, null: false
+    t.integer "contract_renewal12", default: 1, null: false
     t.string "operation_status", default: "電話にて確認", null: false
     t.integer "status_no", default: 9, null: false
     t.integer "update_no", default: 2, null: false

@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       resources :client_events, only: [ :index ]
       resource :password, only: [ :show, :edit, :update ]
       resources :client_passwords, only: [ :show, :edit, :update ]
+      resources :agreements, only: [ :show, :edit, :update ]
       resource :account do
         get :use_month
         get :renewal

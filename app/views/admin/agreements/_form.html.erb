@@ -1,0 +1,18 @@
+<%= markup do |m|
+  p = ClientFormPresenter.new(f, self)
+  m << p.notes
+  p.with_options(required: true) do |q|
+    m << q.drop_down_list_block(:agreement1, '1月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement2, '2月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement3, '3月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement4, '4月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement5, '5月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement6, '6月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement7, '7月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement8, '8月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement9, '9月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement10, '10月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement11, '11月の契約',Client::AGREEMENTS)
+    m << q.drop_down_list_block(:agreement12, '12月の契約',Client::AGREEMENTS)
+  end
+end %>

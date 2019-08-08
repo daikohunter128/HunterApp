@@ -25,12 +25,12 @@
 #set :whenever_environment, :production
 
 set :output, 'log/crontab.log'
-ENV['RAILS_ENV'] ||= 'development'
-#ENV['RAILS_ENV'] ||= 'production'
+#"ENV['RAILS_ENV'] ||= 'development'
+ENV['RAILS_ENV'] ||= 'production'
 set :environment, ENV['RAILS_ENV']
 
-set :environment, "development"
-#set :environment, "production"
+#set :environment, "development"
+set :environment, "production"
 
 every 10.minutes do  #待ち時間情報の最新度（10分ごとチェック）
   runner "Waiting.check"
@@ -41,8 +41,14 @@ every 1.day, at: '5:00 am' do    #毎日AM5:00に本日終了にする。
   runner "Working.break_time"
 end
 
+every 1.day, at: '11:55 pm' do    #毎日PM11:55に有効確認。
+#every 1.day, at: '11:30 pm' do
+  runner "Working.break_time"
+  runner "Contract.renewal"
+end
+
 every '0 1 1 * *' do     #毎月1日に前月の登録を無効にする。
 #every '30 23 28 * *' do
   runner "Usage.use_invalid"
-  runner "Contract.renewal"
+  runner "Contract.reset"
 end

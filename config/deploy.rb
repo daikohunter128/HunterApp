@@ -3,7 +3,7 @@ lock "~> 3.11.0"
 
 set :application, "my_app_name"
 set :repo_url, "git@example.com:me/my_repo.git"
-set :repo_url, "https://github.com/chibikinoko128/ChibiApp.git"
+set :repo_url, "https://github.com/daikohunter128/HunterApp.git"
 set :branch, 'master'
 set :conditionally_migrate, true
 

@@ -97,13 +97,19 @@ Rails.application.configure do
     general: { host: 'hunter-chan.com', path: '' }
   }
   
+  config.action_mailer.perform_deliveries = true
+  host = 'hunter-chan.com'
+  config.action_mailer.default_url_options = { host: host }
+  
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
-    user_name: 'wonder.gate128@gmail.com',
-    password: 'lfhlzujjrmwmdccn',
+    #user_name: 'wonder.gate128@gmail.com',
+    #password: 'lfhlzujjrmwmdccn',
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"],
     #user_name: ENV["GMAIL_USERNAME"],
     #password: ENV["GMAIL_PASSWORD"],
     domain: 'smtp.gmail.com',

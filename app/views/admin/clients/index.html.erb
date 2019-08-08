@@ -44,6 +44,7 @@
         <td class="actions">
           <%= link_to '詳細', [ :admin, m ] %> |
           <%= link_to '編集', [ :edit, :admin, m ] %> |
+          <%= link_to '利用更新', edit_admin_agreement_path(m) %> |
           <%= link_to 'P/W', edit_admin_client_password_path(m) %> |
           <%= link_to 'Events', [ :admin, m, :client_events ] %> |
           <%= link_to '削除', [ :admin, m], method: :delete,

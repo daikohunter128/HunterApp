@@ -34,8 +34,8 @@ class General::ClientsController < General::Base
   
   def show
     @client = Client.find(params[:id])
-    @entry = Entry.find(params[:id])
-    @entry_form = Client::EntryForm.new(Entry.find(params[:id]))
+    @entry = Entry.find_by(client_id: (params[:id]))
+    @entry_form = Client::EntryForm.new(Entry.find_by(client_id: (params[:id])))
     @request = Request.find($a)
   end
   
