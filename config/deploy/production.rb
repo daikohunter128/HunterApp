@@ -77,7 +77,7 @@ set :ssh_options, {
   port: 64273,
   #keys: [File.expand_path('~/.ssh/id_rsa')],
   #keys: %w(/home/vagrant/.ssh/id_rsa),
-  keys: %w(/home/vagrant/centos6/hunter/.ssh/id_rsa_c),
+  keys: %w(/home/vagrant/centos6/hunter/.ssh/id_rsa_d),
   forward_agent: true,
   auth_methods: %w(publickey)
 }
