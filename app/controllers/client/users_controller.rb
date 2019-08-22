@@ -51,7 +51,11 @@ class Client::UsersController < Client::Base
   def create
     time = Time.zone.now
     month = time.month
-    next_month = month + 1
+    if month < 12
+      next_month = month + 1
+    else
+      next_month = 1
+    end
     @account = Client.new(client_params)
     @account["agreement#{month}"] = "有効"
     @account["agreement#{next_month}"] = "有効"
