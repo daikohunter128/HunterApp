@@ -4,7 +4,7 @@
 <% if @clients.present? %>
   <div class="table-wrapper">
     <p>希望の代行業社名をタップ。</p>
-    <th><font size="6" color="purple"><%= @prefecture_choice %>の代行業社一覧</font></th>
+    <th><font size="7" color="purple"><%= @prefecture_choice %>の代行業社一覧</font></th>
     <table class="listing">
       <tr>
         <th>代行業者</th>
@@ -28,8 +28,8 @@
         <% elsif p.operation_status == "電話で確認" %>
           <tr>
             <td><font size="7"><%= link_to  p.company_name, general_client_path(c) %></font></td>
-            <td><font size="6"><%= link_to p.operation_status, general_client_path(c) %></font></td>
-            <td><font size="6" color="blue"><%= link_to "待機中",  general_client_path(c) %>
+            <td><font size="7"><%= link_to p.operation_status, general_client_path(c) %></font></td>
+            <td><font size="7" color="blue"><%= link_to "待機中",  general_client_path(c) %>
           </tr>
         <% else %>
           <tr>
