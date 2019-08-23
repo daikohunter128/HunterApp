@@ -37,7 +37,7 @@
             <td><font size="7"><%= link_to p.company_name, general_client_path(c) %></font></td>
             <td><font size="7"><%= link_to p.operation_status, general_client_path(c) %></font></td>
             <% if Time.zone.now - c.updated_at > 3600 %>
-            <td><strong>㊟</strong>１時間以上前の情報です。</td>
+            <td><strong>㊟</strong>１時間前の情報</td>
             <% else %>
               <td><span class="blinking"><font size="7" color="blue"><%= link_to "最新情報", general_client_path(c) %></font></span></td>
             <% end %>
