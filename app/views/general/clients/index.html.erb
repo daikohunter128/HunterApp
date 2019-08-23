@@ -15,20 +15,20 @@
         <% p = RequestPresenter.new(c, self) %>
         <% if p.operation_status == "本日終了" %>
           <tr>
-            <td><font size="7" color="blue"><%= p.company_name %></font></td>
-            <td><font size="7" color="deeppink"><%= p.operation_status %></font></td>
+            <td><font size="6" color="blue"><%= p.company_name %></font></td>
+            <td><font size="6" color="deeppink"><%= p.operation_status %></font></td>
             <td><strong>thank you</strong></td>
           </tr>
         <% elsif p.operation_status == "本日休業" %>
           <tr>
-            <td><font size="7" color="blue"><%= p.company_name %></font></td>
-            <td><font size="7" color="deeppink"><%= p.operation_status %></font></td>
+            <td><font size="6" color="blue"><%= p.company_name %></font></td>
+            <td><font size="6" color="deeppink"><%= p.operation_status %></font></td>
             <td>ご迷惑お掛けします。</td>
           </tr>
         <% elsif p.operation_status == "電話で確認" %>
           <tr>
-            <td><font size="7"><%= link_to  p.company_name, general_client_path(c) %></font></td>
-            <td><font size="7"><%= link_to p.operation_status, general_client_path(c) %></font></td>
+            <td><font size="6"><%= link_to  p.company_name, general_client_path(c) %></font></td>
+            <td><font size="6"><%= link_to p.operation_status, general_client_path(c) %></font></td>
             <td><font size="5" color="blue"><%= link_to "待機中",  general_client_path(c) %>
           </tr>
         <% else %>
