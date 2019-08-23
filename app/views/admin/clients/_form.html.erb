@@ -2086,23 +2086,36 @@
 </script>
 
 <%= markup do |m|
+  time = Time.zone.now
+  month = time.month
   p = ClientFormPresenter.new(f, self)
   m << p.notes
   p.with_options(required: true) do |q|
     m << q.drop_down_list_block(:operation_status, '運行状況', Client::OPERATION_STATUS)
-    m << q.drop_down_list_block(:contract_renewal, '新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement1, '１月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal1, '1月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement2, '2月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal2, '2月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement3, '3月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal3, '3月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement4, '4月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal4, '4月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement5, '5月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal5, '5月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement6, '6月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal6, '6月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement7, '7月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal7, '7月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement8, '8月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal8, '8月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement9, '9月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal9, '9月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement10, '１0月の契約', Client::AGREEMENTS)
-    m << q.drop_down_list_block(:agreement11, '１1月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal10, '10月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
+    m << q.drop_down_list_block(:agreement11, '11月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal11, '11月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.drop_down_list_block(:agreement12, '１2月の契約', Client::AGREEMENTS)
+    m << q.drop_down_list_block(:contract_renewal12, '12月分--新規：1/継続：2', Client::CONTRACT_RENEWAL)
     m << q.date_field_block(:start_date, '開始日', required: false)
     m << q.date_field_block(:end_date, '終了日', required: false)
   end
