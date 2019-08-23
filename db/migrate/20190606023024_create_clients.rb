@@ -32,7 +32,7 @@ class CreateClients < ActiveRecord::Migration[5.1]
       t.integer :contract_renewal10, null: false, default: 1
       t.integer :contract_renewal11, null: false, default: 1
       t.integer :contract_renewal12, null: false, default: 1
-      t.string :operation_status, null: false, default: "電話にて確認"
+      t.string :operation_status, null: false, default: "電話で確認"
       t.integer :status_no, null: false, default: 9
       t.integer :update_no, null: false, default: 2
       t.string :agreement1, null: false, default: "無効"

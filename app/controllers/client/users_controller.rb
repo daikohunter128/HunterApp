@@ -16,7 +16,7 @@ class Client::UsersController < Client::Base
     if @client.save
       flash.notice = '待ち時間を更新しました。'
       @client.update_no = 1
-      if @client.operation_status == "すぐに伺えます"
+      if @client.operation_status == "即対応可"
         @client.status_no = 1
       elsif @client.operation_status == "30分以内"
         @client.status_no = 2
@@ -32,7 +32,7 @@ class Client::UsersController < Client::Base
         @client.status_no = 7
       elsif @client.operation_status == "3時間以上"
         @client.status_no = 8
-      elsif @client.operation_status == "電話にて確認"
+      elsif @client.operation_status == "電話で確認"
         @client.status_no = 9
       elsif @client.operation_status == "予約のみ"
         @client.status_no = 10

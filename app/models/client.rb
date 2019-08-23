@@ -55,7 +55,7 @@ class Client < ActiveRecord::Base
   
   CONTRACT_RENEWAL = %w(1), %(2)
   
-  OPERATION_STATUS = %w(すぐに伺えます), %w(30分以内), %w(約45分), %w(約1時間), %w(約1時間半), %w(約2時間), %w(約2時間半), %w(3時間以上), %w(本日終了), %w(本日休業), %w(予約のみ), %w(電話にて確認)
+  OPERATION_STATUS = %w(即対応可), %w(30分以内), %w(約45分), %w(約1時間), %w(約1時間半), %w(約2時間), %w(約2時間半), %w(3時間以上), %w(本日終了), %w(本日休業), %w(予約のみ), %w(電話で確認)
   
   PREFECTURE_NAMES = %w(
     北海道

@@ -17,7 +17,7 @@
           <tr>
             <td><font size="7" color="blue"><%= p.company_name %></font></td>
             <td><font size="7" color="deeppink"><%= p.operation_status %></font></td>
-            <td><strong>ありがとうございました。</strong></td>
+            <td><strong>thank you</strong></td>
           </tr>
         <% elsif p.operation_status == "本日休業" %>
           <tr>
@@ -25,11 +25,11 @@
             <td><font size="7" color="deeppink"><%= p.operation_status %></font></td>
             <td>ご迷惑お掛けします。</td>
           </tr>
-        <% elsif p.operation_status == "電話にて確認" %>
+        <% elsif p.operation_status == "電話で確認" %>
           <tr>
             <td><font size="7"><%= link_to  p.company_name, general_client_path(c) %></font></td>
             <td><font size="6"><%= link_to p.operation_status, general_client_path(c) %></font></td>
-            <td><font size="6" color="blue"><%= link_to "お待ちしてます。",  general_client_path(c) %>
+            <td><font size="6" color="blue"><%= link_to "待機中",  general_client_path(c) %>
           </tr>
         <% else %>
           <tr>
@@ -39,7 +39,7 @@
             <% if Time.zone.now - c.updated_at > 3600 %>
             <td><strong>㊟</strong>１時間以上前の情報です。</td>
             <% else %>
-              <td><span class="blinking"><font size="7" color="blue"><%= link_to "最新情報です。", general_client_path(c) %></font></span></td>
+              <td><span class="blinking"><font size="7" color="blue"><%= link_to "最新情報", general_client_path(c) %></font></span></td>
             <% end %>
           </tr>
         <% end %>
