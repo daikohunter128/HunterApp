@@ -2,13 +2,13 @@
   <P><font color="blue">代行業者の地区を選択</font></P>
 </div>
 <div class="notes">
-  <span class="mark">*</span> <font color="deeppink">印の付いた項目は入力必須です。</font>
+  <h2><span class="mark">*</span> <font color="deeppink">印の付いた項目は入力必須です。</font></h2>
 </div>
 
 <div>
-  <%= f.label :prefecture, '1、呼びたい都道府県', class: 'required' %>
+  <h2><%= f.label :prefecture, '1、呼びたい都道府県', class: 'required' %></h2>
   <select class="parent" name="request[prefecture]" required>
-    <option value="" class="msg" disabled selected>-----①都道府県を選択-----</option>
+    <option value="" class="msg" disabled selected>-----①都道府県を選択してください。-----</option>
     <option value="北海道"> 北海道</option>
     <option value="青森県">青森県</option>
     <option value="岩手県">岩手県</option>
@@ -60,9 +60,9 @@
   <p></p>
   <p></p>
   
-  <%= f.label :city, '２、呼びたい市区町村', class: 'required' %>
+  <h2><%= f.label :city, '２、呼びたい市区町村', class: 'required' %></h2>
   <select class="children" name="request[city]" disabled required>
-    <option value="" class="msg" disabled selected>-----②市区町村を選択-----</option>
+    <option value="" class="msg" disabled selected>-----②市区町村を選択してください。-----</option>
     <!--北海道-->
       <option value="札幌市中央区" data-val="北海道">札幌市中央区</option>
       <option value="札幌市北区" data-val="北海道">札幌市北区</option>

@@ -15,8 +15,12 @@ div#wrapper {
       font-size: $huge;
       input[type='text'], select {
             padding: $wide;
-            width: 400px - $wide * 4;
-            font-size: $huge;
+            width: 900px - $wide * 4;
+            font-size: 50px;
+            height: 150px;
+      }
+      input[type='text'], option {
+            font-size: 50px;
       }
       div.account {
         text-align: center;
@@ -59,6 +63,7 @@ div#wrapper {
           label {
             display: block;
             padding: $moderate 0;
+            font-size: 60px;
           }
           label.required:after {
             content: '*';
@@ -81,6 +86,9 @@ div#wrapper {
           text-align: center;
           input[type='submit'] {
             padding: $wide $very_wide;
+            width: 300px;
+            height: 110px;
+            font-size: 40px;
           }
         }
         div.field_with_errors {
