@@ -20,6 +20,8 @@
       <th>代表者名</th>
       <th>電話番号</th>
       <th>開始日</th>
+      <th>終了日</th>
+      <th>停止フラグ</th>
       <th>アクション</th>
     </tr>
     <% @clients.each do |m| %>
@@ -35,9 +37,16 @@
         <td><%= m.representative %></td>
         <td><%= m.phone1 %>-<%= m.phone2 %>-<%= m.phone3 %></td>
         <td class="date"><%= m.start_date.strftime('%Y/%m/%d') %></td>
+        <td class="date"><%= m.end_date.try(:strftime, '%Y/%m/%d') %></td>
+        <td class="boolean"><%= p.suspended_mark %></td>
         <td class="actions">
           <%= link_to '詳細', [ :admin, m ] %> |
-          <%= link_to '利用更新', edit_admin_agreement_path(m) %>
+          <%= link_to '編集', [ :edit, :admin, m ] %> |
+          <%= link_to '利用更新', edit_admin_agreement_path(m) %> |
+          <%= link_to 'P/W', edit_admin_client_password_path(m) %> |
+          <%= link_to 'Events', [ :admin, m, :client_events ] %> |
+          <%= link_to '削除', [ :admin, m], method: :delete,
+            data: { confirm: '本当に削除しますか？' } %>
         </td>
       </tr>
     <% end %>

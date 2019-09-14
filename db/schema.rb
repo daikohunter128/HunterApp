@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 20190711144010) do
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", null: false
     t.string "email_for_index", null: false
+    t.string "prefecture"
+    t.string "send_code"
     t.string "hashed_password"
     t.date "start_date", null: false
     t.date "end_date"
@@ -65,7 +67,7 @@ ActiveRecord::Schema.define(version: 20190711144010) do
     t.integer "contract_renewal10", default: 1, null: false
     t.integer "contract_renewal11", default: 1, null: false
     t.integer "contract_renewal12", default: 1, null: false
-    t.string "operation_status", default: "電話にて確認", null: false
+    t.string "operation_status", default: "電話で確認", null: false
     t.integer "status_no", default: 9, null: false
     t.integer "update_no", default: 2, null: false
     t.string "agreement1", default: "無効", null: false
@@ -85,7 +87,7 @@ ActiveRecord::Schema.define(version: 20190711144010) do
     t.boolean "suspended", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["certification"], name: "index_clients_on_certification", unique: true
+    t.index ["certification"], name: "index_clients_on_certification"
     t.index ["company_name"], name: "index_clients_on_company_name"
     t.index ["company_name_kana"], name: "index_clients_on_company_name_kana"
     t.index ["email_for_index"], name: "index_clients_on_email_for_index", unique: true

@@ -1498,6 +1498,6 @@ class Admin::AccountsController < Admin::Base
   
   private
   def administrator_params
-    params.require(:administrator).permit(:email)
+    params.require(:administrator).permit(:email, :prefecture, :password, :send_code)
   end
 end

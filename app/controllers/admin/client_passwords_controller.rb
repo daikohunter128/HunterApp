@@ -8,7 +8,7 @@ class Admin::ClientPasswordsController < Admin::Base
     @client.assign_attributes(client_params)
     if @client.save
       flash.notice = '代行業者パスワードを更新しました。'
-      redirect_to :admin_clients
+      redirect_to :admin_root
     else
       render action: 'edit'
     end

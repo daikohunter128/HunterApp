@@ -56,7 +56,7 @@ class CreateClients < ActiveRecord::Migration[5.1]
     
     add_index :clients, :email_for_index, unique: true
     add_index :clients, :company_name
-    add_index :clients, :certification, unique: true
+    add_index :clients, :certification
     add_index :clients, :prefecture_cord
     add_index :clients, :operation_status
   end

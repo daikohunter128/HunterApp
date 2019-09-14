@@ -28,9 +28,119 @@ Rails.application.routes.draw do
     namespace :admin, path: config[:admin][:path] do
       root 'top#index'
       get 'login' => 'sessions#new', as: :login
+      get 'index' => 'clients#index', as: :client_index
+      get 'index' => 'chooses#index', as: :choose_index
       resource :session, only: [ :create, :destroy ]
+      resource :choose do
+        get :index_first
+        get :prefecture_search
+        get :hokkaidou
+        get :aomori
+        get :iwate
+        get :miyagi
+        get :akita
+        get :yamagata
+        get :fukushima
+        get :ibaraki
+        get :tochigi
+        get :gunma
+        get :saitama
+        get :chiba
+        get :tokyo
+        get :kanagawa
+        get :niigata
+        get :toyama
+        get :ishikawa
+        get :fukui
+        get :yamanashi
+        get :nagano
+        get :gifu
+        get :shizuoka
+        get :aichi
+        get :mie
+        get :shiga
+        get :kyoto
+        get :oosaka
+        get :hyogo
+        get :nara
+        get :wakayama
+        get :tottori
+        get :shimane
+        get :okayama
+        get :hiroshima
+        get :yamaguchi
+        get :tokushima
+        get :kagawa
+        get :ehime
+        get :kochi
+        get :fukuoka
+        get :saga
+        get :nagasaki
+        get :kumamoto
+        get :ooita
+        get :miyazaki
+        get :kagoshima
+        get :okinawa
+      end
+      
       resources :clients do
         resources :client_events, only: [ :index ]
+      end
+      resources :chooses do
+        resources :client_events, only: [ :index ]
+      end
+      
+      resource :client do
+        
+        get :prefecture_search
+        get :hokkaidou
+        get :aomori
+        get :iwate
+        get :miyagi
+        get :akita
+        get :yamagata
+        get :fukushima
+        get :ibaraki
+        get :tochigi
+        get :gunma
+        get :saitama
+        get :chiba
+        get :tokyo
+        get :kanagawa
+        get :niigata
+        get :toyama
+        get :ishikawa
+        get :fukui
+        get :yamanashi
+        get :nagano
+        get :gifu
+        get :shizuoka
+        get :aichi
+        get :mie
+        get :shiga
+        get :kyoto
+        get :oosaka
+        get :hyogo
+        get :nara
+        get :wakayama
+        get :tottori
+        get :shimane
+        get :okayama
+        get :hiroshima
+        get :yamaguchi
+        get :tokushima
+        get :kagawa
+        get :ehime
+        get :kochi
+        get :fukuoka
+        get :saga
+        get :nagasaki
+        get :kumamoto
+        get :ooita
+        get :miyazaki
+        get :kagoshima
+        get :okinawa
+        #resources :client_events, only: [ :index ]
       end
       resources :client_events, only: [ :index ]
       resource :password, only: [ :show, :edit, :update ]

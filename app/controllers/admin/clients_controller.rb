@@ -1,8 +1,12 @@
 class Admin::ClientsController < Admin::Base
   
   def index
-    @clients = Client.order(:prefecture_cord)
-      .page(params[:page])
+    pref = Administrator.find(1)
+    prefecture = pref.prefecture
+    @clients = Client.where(prefecture: prefecture).order(:prefecture_cord).page(params[:page])
+    
+    #@clients = Client.order(:prefecture_cord)
+      #.page(params[:page])
   end
   
   def show
@@ -55,11 +59,14 @@ class Admin::ClientsController < Admin::Base
   
   def update
     @client = Client.find(params[:id])
+    send = Administrator.find(1)
     @client.assign_attributes(client_params)
     if @client.save
       flash.notice = '代行業者アカウントを更新しました。'
-      redirect_to :admin_clients
-      change
+      redirect_to :admin_root
+      if send.send_code == "送信"
+      　change
+      end
     else
       render action: 'edit'
     end
@@ -560,6 +567,386 @@ class Admin::ClientsController < Admin::Base
       $agreement_month = @client.agreement12
       $agreement_next_month = @client.agreement1
     end
+  end
+  
+  def prefecture_search
+    render action: 'prefecture_search'
+  end
+  
+  def hokkaidou
+    pref = Administrator.find(1)
+    pref.prefecture = "北海道"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def aomori
+    pref = Administrator.find(1)
+    pref.prefecture = "青森県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def iwate
+    pref = Administrator.find(1)
+    pref.prefecture = "岩手県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def miyagi
+    pref = Administrator.find(1)
+    pref.prefecture = "宮城県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def akita
+    pref = Administrator.find(1)
+    pref.prefecture = "秋田県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def yamagata
+    pref = Administrator.find(1)
+    pref.prefecture = "山形県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def fukushima
+    pref = Administrator.find(1)
+    pref.prefecture = "福島県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def ibaraki
+    pref = Administrator.find(1)
+    pref.prefecture = "茨城県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def tochigi
+    pref = Administrator.find(1)
+    pref.prefecture = "栃木県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def gunma
+    pref = Administrator.find(1)
+    pref.prefecture = "群馬県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def saitama
+    pref = Administrator.find(1)
+    pref.prefecture = "埼玉県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def chiba
+    pref = Administrator.find(1)
+    pref.prefecture = "千葉県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def tokyo
+    pref = Administrator.find(1)
+    pref.prefecture = "東京都"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def kanagawa
+    pref = Administrator.find(1)
+    pref.prefecture = "神奈川県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def niigata
+    pref = Administrator.find(1)
+    pref.prefecture = "新潟県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def toyama
+    pref = Administrator.find(1)
+    pref.prefecture = "富山県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def ishikawa
+    pref = Administrator.find(1)
+    pref.prefecture = "石川県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def fukui
+    pref = Administrator.find(1)
+    pref.prefecture = "福井県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def yamanashi
+    pref = Administrator.find(1)
+    pref.prefecture = "山梨県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def nagano
+    pref = Administrator.find(1)
+    pref.prefecture = "長野県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def gifu
+    pref = Administrator.find(1)
+    pref.prefecture = "岐阜県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def shizuoka
+    pref = Administrator.find(1)
+    pref.prefecture = "静岡県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def aichi
+    pref = Administrator.find(1)
+    pref.prefecture = "愛知県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def mie
+    pref = Administrator.find(1)
+    pref.prefecture = "三重県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def shiga
+    pref = Administrator.find(1)
+    pref.prefecture = "滋賀県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def kyoto
+    pref = Administrator.find(1)
+    pref.prefecture = "京都府"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def oosaka
+    pref = Administrator.find(1)
+    pref.prefecture = "大阪府"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def hyogo
+    pref = Administrator.find(1)
+    pref.prefecture = "兵庫県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def nara
+    pref = Administrator.find(1)
+    pref.prefecture = "奈良県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def wakayama
+    pref = Administrator.find(1)
+    pref.prefecture = "和歌山県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def tottori
+    pref = Administrator.find(1)
+    pref.prefecture = "鳥取県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def shimane
+    pref = Administrator.find(1)
+    pref.prefecture = "島根県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def okayama
+    pref = Administrator.find(1)
+    pref.prefecture = "岡山県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def hiroshima
+    pref = Administrator.find(1)
+    pref.prefecture = "広島県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def yamaguchi
+    pref = Administrator.find(1)
+    pref.prefecture = "山口県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def tokushima
+    pref = Administrator.find(1)
+    pref.prefecture = "徳島県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def kagawa
+    pref = Administrator.find(1)
+    pref.prefecture = "香川県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def ehime
+    pref = Administrator.find(1)
+    pref.prefecture = "愛媛県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def kochi
+    pref = Administrator.find(1)
+    pref.prefecture = "高知県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def fukuoka
+    pref = Administrator.find(1)
+    pref.prefecture = "福岡県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def saga
+    pref = Administrator.find(1)
+    pref.prefecture = "佐賀県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def nagasaki
+    pref = Administrator.find(1)
+    pref.prefecture = "長崎県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def kumamoto
+    pref = Administrator.find(1)
+    pref.prefecture = "熊本県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def ooita
+    pref = Administrator.find(1)
+    pref.prefecture = "大分県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def miyazaki
+    pref = Administrator.find(1)
+    pref.prefecture = "宮崎県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def kagoshima
+    pref = Administrator.find(1)
+    pref.prefecture = "鹿児島県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
+  end
+  
+  def okinawa
+    pref = Administrator.find(1)
+    pref.prefecture = "沖縄県"
+    pref.send_code = "送信"
+    pref.save
+    redirect_to :admin_client_index
   end
   
   private

@@ -9,7 +9,7 @@ class Admin::AgreementsController < Admin::Base
     @client.assign_attributes(client_params)
     if @client.save
       flash.notice = '利用状況を有効にしました。'
-      redirect_to :admin_clients
+      redirect_to :admin_root
       chenge
     else
       render action: 'edit'
