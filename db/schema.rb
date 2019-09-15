@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190711144010) do
+ActiveRecord::Schema.define(version: 20190915034249) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", null: false
     t.string "email_for_index", null: false
-    t.string "prefecture"
-    t.string "send_code"
     t.string "hashed_password"
     t.date "start_date", null: false
     t.date "end_date"
     t.boolean "suspended", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "prefecture"
+    t.string "send_code"
     t.index ["email_for_index"], name: "index_administrators_on_email_for_index", unique: true
   end
 

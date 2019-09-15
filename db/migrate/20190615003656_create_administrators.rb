@@ -3,8 +3,6 @@ class CreateAdministrators < ActiveRecord::Migration[5.1]
     create_table :administrators do |t|
       t.string :email, null: false
       t.string :email_for_index, null: false
-      t.string :prefecture
-      t.string :send_code
       t.string :hashed_password
       t.date :start_date, null: false
       t.date :end_date
