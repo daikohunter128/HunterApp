@@ -2,9 +2,9 @@ class CreateClients < ActiveRecord::Migration[5.1]
   def change
     create_table :clients do |t|
       t.string :company_name, null: false
-      t.string :company_name_kana, null: false
-      t.string :representative, null: false
-      t.string :representative_kana, null: false
+      t.string :company_name_kana, null: false, default: "---"
+      t.string :representative, null: false, default: "---"
+      t.string :representative_kana, null: false, default: "---"
       t.string :certification, null: false, default: ""
       t.string :postal_code1, null: false, default: ""
       t.string :postal_code2, null: false, default: ""

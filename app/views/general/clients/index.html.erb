@@ -1,10 +1,61 @@
 <% @title = '代行業者検索結果一覧' %>
 <h1><%= @title %></h1>
 
-<% if @clients.present? %>
-  <div class="table-wrapper">
-    <p>希望の代行業社名をタップ。</p>
-    <th><font size="7" color="purple"><%= @prefecture_choice %>の代行業社一覧</font></th>
+<div class="table-wrapper">
+  <p>希望の代行業社名をタップ</p>
+  <th><font size="7" color="purple"><%= @prefecture_pre %></font></th><br>
+  <th><font size="7" color="purple"><%= @prefecture_city %>　<strong>おすすめ</strong>　代行業社一覧</font></th>
+  <% if @clients_special.present? %>
+    <table class="listing">
+      <tr>
+        <th>代行業者</th>
+        <th>待ち時間</th>
+        <th>情報の精度</th>
+      </tr>
+      <% @clients_special.each do |c| %>
+        <% p = RequestPresenter.new(c, self) %>
+        <% if p.operation_status == "本日終了" %>
+          <tr>
+            <td><font size="6" color="blue"><%= p.company_name %></font></td>
+            <td><font size="6" color="deeppink"><%= p.operation_status %></font></td>
+            <td><font size="5" color="blue"><strong>thank you</strong></font></td>
+          </tr>
+        <% elsif p.operation_status == "本日休業" %>
+          <tr>
+            <td><font size="6" color="blue"><%= p.company_name %></font></td>
+            <td><font size="6" color="deeppink"><%= p.operation_status %></font></td>
+            <td>ご迷惑お掛けします。</td>
+          </tr>
+        <% elsif p.operation_status == "電話で確認" %>
+          <tr>
+            <td><font size="6"><%= link_to  p.company_name, general_client_path(c) %></font></td>
+            <td><font size="6"><%= link_to p.operation_status, general_client_path(c) %></font></td>
+            <td><font size="5" color="blue"><%= link_to "待機中",  general_client_path(c) %>
+          </tr>
+        <% else %>
+          <tr>
+            <% info = c.updated_at %>
+            <td><font size="7"><%= link_to p.company_name, general_client_path(c) %></font></td>
+            <td><font size="7"><%= link_to p.operation_status, general_client_path(c) %></font></td>
+            <% if Time.zone.now - c.updated_at > 3600 %>
+            <td><font size="5" color="blue"><strong>㊟</strong><%= link_to "１時間前",  general_client_path(c) %>
+            <% else %>
+              <td><span class="blinking"><font size="7" color="blue"><%= link_to "最新情報", general_client_path(c) %></font></span></td>
+            <% end %>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+  <% else %>
+     <div class="main">
+      <%= @request.prefecture + @request.city %>
+      <strong><P>表示の代行業者より選択してください。</P></strong>
+    </div>  
+  <% end %>
+  <p>希望の代行業社名をタップ</p>
+  <th><font size="7" color="purple"><%= @prefecture_pre %></font></th><br>
+  <th><font size="7" color="purple"><%= @prefecture_city %>の代行業社一覧</font></th>
+  <% if @clients.present? %>
     <table class="listing">
       <tr>
         <th>代行業者</th>
@@ -37,7 +88,7 @@
             <td><font size="7"><%= link_to p.company_name, general_client_path(c) %></font></td>
             <td><font size="7"><%= link_to p.operation_status, general_client_path(c) %></font></td>
             <% if Time.zone.now - c.updated_at > 3600 %>
-            <td><strong>㊟</strong>１時間前</td>
+              <td><font size="5" color="blue"><strong>㊟</strong><%= link_to "１時間前",  general_client_path(c) %>  
             <% else %>
               <td><span class="blinking"><font size="7" color="blue"><%= link_to "最新情報", general_client_path(c) %></font></span></td>
             <% end %>
@@ -45,14 +96,13 @@
         <% end %>
       <% end %>
     </table>
-  </div>
-    
-<% else %>
-  <div class="main">
-    <%= @request.prefecture + @request.city %>
-    <strong><P>代行業者の登録はありません。</P></strong>
-  </div>
-<% end %>
+  <% else %>
+    <div class="main">
+      <%= @request.prefecture + @request.city %>
+      <strong><P>代行業者の登録はありません。</P></strong>
+    </div>
+  <% end %>
+</div>
 
 <div class="main">
   <div class="links">

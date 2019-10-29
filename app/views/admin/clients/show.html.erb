@@ -6,6 +6,7 @@
    <tr><th colspan="2">代行業者詳細情報</th></tr>
     <% p1 = ClientPresenter.new(@client, self) %>
     <tr><th>認定番号</th><td><%= p1.certification %></td></tr>
+    <tr><th>業社コード</th><td><%= p1.prefecture_cord %></td></tr>
     <tr><th>社名</th><td><%= p1.company_name %></td></tr>
     <tr><th>フリガナ（社名）</th><td><%= p1.company_name_kana %></td></tr>
     <tr><th>代表者名</th><td><%= p1.representative %></td></tr>
